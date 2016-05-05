@@ -1,7 +1,7 @@
 classdef channel
    properties
        % some sort of list % 
-      frequency
+      frq
    end
    
    methods
