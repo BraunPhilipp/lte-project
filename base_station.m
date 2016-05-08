@@ -18,5 +18,11 @@ classdef base_station
             obj.bndw = bndw_attr;
             obj.gain = gain_attr;
         end
+        
+        function rsc = resource(self)
+            % Generates random resource block
+            b = self.bndw/2;
+            rsc = randi([self.frq-b self.frq+b]);
+        end
     end
 end
