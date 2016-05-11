@@ -14,7 +14,7 @@ classdef user_entity
         function dist = distance(self, b)
             % Calculate Distance between Base Station and User Entity
             tmp_pos = self.pos - b.pos;
-            dist = abs(tmp_pos(1) / cos(atand(tmp_pos(2)/tmp_pos(1))));
+            dist = length(tmp_pos);
         end
         
         function fr = friis(self, b)
