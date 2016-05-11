@@ -28,7 +28,7 @@ classdef user_entity
             noise = 0;
             sigma = randn;
             % Sum over all elements except #sel
-            for i = 1:length(b)
+            for (1:length(b))
                 if i ~= sel
                     noise = noise + dbw(self.friis(b(i)));
                 end

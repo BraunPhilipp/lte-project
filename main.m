@@ -17,6 +17,8 @@ end
 % Channel Testing
 ts = 100;
 fd = 0.001;
+
+% what to do with rayleighchannel??
 chan = rayleighchan(ts,fd);
 x = [repmat(1:1000,1)];
 y = filter(chan,x);
