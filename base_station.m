@@ -6,6 +6,7 @@ classdef base_station
         frq;
         bndw;
         gain;
+        sub;
     end
    
     methods
@@ -17,6 +18,7 @@ classdef base_station
             obj.frq = frq_attr;
             obj.bndw = bndw_attr;
             obj.gain = gain_attr;
+            obj.sub = [];
         end
         
         function rsc = resource(self)
@@ -24,5 +26,13 @@ classdef base_station
             b = self.bndw/2;
             rsc = randi([self.frq-b self.frq+b]);
         end
+        
+        function sub = subcarrier(self)
+            % Gets 25 independent Subcarriers
+            for i = self.frq-b:self.bndw/25:self.frq+b
+                self.sub(end+1) = i;
+            end
+        end
+        
     end
 end
