@@ -1,10 +1,11 @@
 classdef base_station
+    % Base Station
     properties
-        id;
-        pwr;
-        pos;
-        frq;
-        bndw;
+        id; 
+        pwr; % dBm
+        pos; % m [x y]
+        frq; % Hz
+        bndw; % Hz
         gain;
         sub;
     end
@@ -19,12 +20,6 @@ classdef base_station
             obj.bndw = bndw_attr;
             obj.gain = gain_attr;
             obj.sub = [];
-        end
-        
-        function rsc = resource(self)
-            % Generates random resource block
-            b = self.bndw/2;
-            rsc = randi([self.frq-b self.frq+b]);
         end
         
         function sub = subcarrier(self)
