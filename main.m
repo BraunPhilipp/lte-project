@@ -23,5 +23,7 @@ ue(1).snr(bs, 2)
 % chan = rayleighchan(ts,fd);
 % x = [repmat(1:1000,1)];
 % y = filter(chan,x);
-% 
+
 % plot(y,x)
+
+
