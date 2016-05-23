@@ -60,7 +60,7 @@ classdef channel
            
            %plot the result
            x = 0:0.01*Ts:Ts;
-           stem(x,h);
+           stem
        end
        
    end

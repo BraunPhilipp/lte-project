@@ -26,4 +26,5 @@ ue(1).snr(bs, 2)
 
 % plot(y,x)
 
-
+% chan = channel();
+% chan.ray_chan();
