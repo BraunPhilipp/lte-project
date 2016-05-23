@@ -7,7 +7,9 @@ classdef channel
       % delay[ns] | relative power[dB]
       % pdp := Power Delay Profile
       pdp = [0 -1; 50 -1; 120 -1; 200 0; 230 0; 500 0; 1600 -3; 2300 -5; 5000 -7];
-      L = length(pdp(:,1));
+      
+      %L = length(pdp(:,1));
+      L = 9;
       % delta f kHz
       df = 180000;
    end
