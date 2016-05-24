@@ -8,48 +8,87 @@ classdef channel
       % pdp := Power Delay Profile
       pdp = [0 -1; 50 -1; 120 -1; 200 0; 230 0; 500 0; 1600 -3; 2300 -5; 5000 -7];
       
-      %L = length(pdp(:,1));
-      L = 9;
+      %L = length of received signal
+      L = 0
       % delta f kHz
       df = 180000;
    end
    
    methods     
+       
+       function y = sinc_interp(~,x,u)
+           y = zeros(length(u),1);
+           m = 0:length(x)-1;
+           for i=1:length(u)
+               y(i) = sum(x.*sinc(m- u(i)));
+           end
+       end
+       
        % Rayleigh-Channel
        function ray_chan(self)
-           % multiply with 10^.-9 to get ns
-           pdp_loc = zeros(self.L,1);
-           pdp_loc(:)=self.pdp(:,1)*10^-9;
            % initialising H(k) 
            H = zeros(self.K,1);
            
-           % takes the power --> second column of pdp
-           e = self.pdp(:,2);
-           % converting db to power measurment
-           e = db2pow(e);
+           % e is the power received --> second column of pdp
+           % initialize e:
+           e = zeros(501,2);
+           
+           % e saves time in first column and power of signal
+           % in the second column:
+           e(1:1:501)=(0:10:5000)*10^(-9);
+           e(1,2)=db2pow(-1);
+           e(6,2)=db2pow(-1);
+           e(13,2)=db2pow(-1);
+           e(21,2)=db2pow(0);
+           e(24,2)=db2pow(0);
+           e(51,2)=db2pow(0);
+           e(161,2)=db2pow(-3);
+           e(231,2)=db2pow(-5);
+           e(501,2)=db2pow(-7);
+
            % Energy spectral density describes how the energy of a signal
            % or a time series is distributed with frequency.
-           energy_spectral_density = sum(e.*conj(e));
+           energy_spectral_density = sum(e(:,2).*conj(e(:,2)));
            % normalisation of the channel
-           e = e/sqrt(energy_spectral_density);
+           e(:,2) = e(:,2)/sqrt(energy_spectral_density);
+           
+           % plot the received signal
+           figure
+           subplot(2,2,1);
+           stem(e(:,1),e(:,2));
+           title('e[t]');
            
            % Fourier transformation to H(k)
            % e(l) := power of the l-th arrival path
            % pdp(l,1) := delay
            % k = subcarrier index
            
-           l = 1:self.L;
+           l = 1:501;
            
            for k = 1:self.K
-              H(k) = sum(e(l).*exp(-1i*2*pi*k*pdp_loc(l)*self.df));
+              H(k) = sum(e(l,2).*exp(-1i*2*pi*k*e(l,1)*self.df));
               H(k) = abs(H(k));
            end
            
+           %sinc-Interpolation:
+           t= 1:128;
+           ts = linspace(1,128,128);
+           [Ts,T] = ndgrid(ts,t);
+           y = sinc(Ts-T)*H;
+           %Hi = self.sinc_interp(transpose(H),x);
+           %t = 3;
+           %(sinc(t-x)*H(x))
+           %Hi(3)
+           
            % plot the result
-           x = 1:128;
-           figure
-           subplot(2,1,1)
+           subplot(2,2,2)
+           x= (1:self.K)*self.df;
            stem(x,H);
+           title('|H[f]|');
+           
+           subplot(2,2,3)
+           plot(t*self.df,y)
+           title('|H(f)|');
            
            % effective time domain response of the channel
            % inverse Fourier transformation
@@ -66,8 +105,9 @@ classdef channel
            
            %plot the result
            x = 0:0.01*Ts:Ts;
-           subplot(2,1,2)
+           subplot(2,2,4)
            stem(x,h);
+           title('|h[t]|');
        end
        
    end
