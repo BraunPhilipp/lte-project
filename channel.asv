@@ -1,4 +1,4 @@
-classdef channel
+classdef channel < handle
    properties 
       frq   % Channel frequency
       K = 128; % number of subcarriers
@@ -47,8 +47,7 @@ classdef channel
            
            % plot the result
            x = 1:128;
-           figure
-           subplot(2,1,1)
+           figure 
            stem(x,H);
            
            % effective time domain response of the channel
@@ -66,7 +65,6 @@ classdef channel
            
            %plot the result
            x = 0:0.01*Ts:Ts;
-           subplot(2,1,2)
            stem(x,h);
        end
        
