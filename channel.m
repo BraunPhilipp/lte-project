@@ -26,7 +26,7 @@ classdef channel
        
        % Rayleigh-Channel
        function ratioOfAtten = ray_chan(self)
-           % initialising H(k) 
+           % initialising H(k)
            H = zeros(self.K,1);
            
            % e is the power received --> second column of pdp
@@ -114,3 +114,20 @@ classdef channel
        
    end
 end
+
+% rand Channel Quality Indicator (CQI) {0,15} -> 0 high throughput
+% 0  -> Low Coding Rate & High Modulation
+% 15 -> High Coding Rate (QAM) & Low Modulation
+% High Modulation (64 QAM)
+
+% Low spectral efficiency [bit/sec * Hz]
+% rand Pre-coding Matrix Indicator PMI
+% rand Rank Indicator RI
+
+% Central Unit (Interference between Basestations)
+% Scheduler sets different Subcarriers for User Entities
+
+% Biterror Rate 10^2 -> SNR -> QAM
+
+% Signaling (Round Robin)
+% Resource Element == Spectral Efficiency * T_sym * Delta<F>
