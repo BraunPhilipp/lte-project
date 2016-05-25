@@ -25,7 +25,7 @@ classdef channel
        end
        
        % Rayleigh-Channel
-       function ray_chan(self)
+       function ratioOfAtten = ray_chan(self, freq)
            % initialising H(k) 
            H = zeros(self.K,1);
            
@@ -79,6 +79,8 @@ classdef channel
            %t = 3;
            %(sinc(t-x)*H(x))
            %Hi(3)
+           
+           ratioOfAtten = (sinc(freq-(1:self.K))*H);
            
            % plot the result
            subplot(2,2,2)
