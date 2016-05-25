@@ -15,6 +15,9 @@ end
 
 ue(1).snr(bs, 2)
 
+ch = channel;
+ch.ray_chan(100)
+
 % Channel Testing
 % ts = 100;
 % fd = 0.001;

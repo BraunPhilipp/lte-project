@@ -36,7 +36,7 @@ classdef user_entity
             end
             interference = interference - ( b(sel).pwr - self.friis(b(sel)));
             % p_R = p_T - p_L
-            s = (b(sel).pwr - self.friis(b(sel))+10*log10(self.ray_chan())) - (interference + self.noise);
+            s = (b(sel).pwr - self.friis(b(sel))+10*log10(self.ch.ray_chan(100))) - (interference + self.noise);
         end
 
     end
