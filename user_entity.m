@@ -3,6 +3,7 @@ classdef user_entity
         id;
         pos;
         noise;
+        ch;
     end
    
     methods
@@ -11,6 +12,7 @@ classdef user_entity
             obj.id = id_attr;
             obj.pos = pos_attr;
             obj.noise = noise_attr;
+            obj.ch = channel();
         end
 
         function dist = distance(self, b)
@@ -32,9 +34,9 @@ classdef user_entity
             for i = 1:length(b)
                 interference = interference + b(i).pwr - self.friis(b(i));
             end
-            interference = interference - self.friis(b(sel));
+            interference = interference - ( b(sel).pwr - self.friis(b(sel)));
             % p_R = p_T - p_L
-            s = (b(sel).pwr - self.friis(b(sel))) - (interference + self.noise);
+            s = (b(sel).pwr - self.friis(b(sel))+10*log10(self.ch.ray_chan())) - (interference + self.noise);
         end
 
     end
