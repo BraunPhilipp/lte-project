@@ -1,8 +1,12 @@
 classdef user_entity
     properties
+        %identification
         id;
+        %position
         pos;
+        %noise
         noise;
+        %channel
         ch;
     end
    
