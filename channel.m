@@ -1,6 +1,6 @@
 classdef channel
    properties 
-      frq   % Channel frequency
+      frq  = 10000000 % Channel frequency
       K = 128; % number of subcarriers
       % Power delay profile
       % compare Table B.2-3 Extended Typical Urban model (ETU)
@@ -25,7 +25,7 @@ classdef channel
        end
        
        % Rayleigh-Channel
-       function ratioOfAtten = ray_chan(self, freq)
+       function ratioOfAtten = ray_chan(self)
            % initialising H(k) 
            H = zeros(self.K,1);
            
@@ -80,7 +80,7 @@ classdef channel
            %(sinc(t-x)*H(x))
            %Hi(3)
            
-           ratioOfAtten = (sinc(freq-(1:self.K))*H);
+           ratioOfAtten = (sinc(self.frq/(128*self.df)*ones(1,self.K)-(1:self.K))*H);
            
            % plot the result
            subplot(2,2,2)
