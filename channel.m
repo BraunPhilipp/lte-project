@@ -84,12 +84,12 @@ classdef channel
            
            % plot the result
            subplot(2,2,2)
-           x= (1:self.K)*self.df;
+           x= (1:self.K);
            stem(x,H);
            title('|H[f]|');
            
            subplot(2,2,3)
-           plot(t*self.df,y)
+           plot(t,y)
            title('|H(f)|');
            
            % effective time domain response of the channel
