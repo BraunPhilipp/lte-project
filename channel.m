@@ -9,9 +9,12 @@ classdef channel
       pdp = [0 -1; 50 -1; 120 -1; 200 0; 230 0; 500 0; 1600 -3; 2300 -5; 5000 -7];
       
       %L = length of received signal
-      L = 0
+      %L = 0
       % delta f kHz
       df = 180000;
+      cqi; %Channel Quality Indicator
+      pmi; %Precoding Matrix Indicator
+      ri; %Rank Indicator
    end
    
    methods     
@@ -26,7 +29,7 @@ classdef channel
        
        % Rayleigh-Channel
        function ratioOfAtten = ray_chan(self)
-           % initialising H(k)
+           % initialising H(k) 
            H = zeros(self.K,1);
            
            % e is the power received --> second column of pdp
@@ -62,7 +65,7 @@ classdef channel
            % e(l) := power of the l-th arrival path
            % pdp(l,1) := delay
            % k = subcarrier index
-           
+           % length of incoming signal = 501
            l = 1:501;
            
            for k = 1:self.K
@@ -101,6 +104,7 @@ classdef channel
            h = zeros(length(m),1); % result of the Fourier transformation
            
            for i = 1:length(m)
+               % from row vector to column vector and back
             h(i,1) = (1/Nfft)*sum(transpose(H(transpose(k))).*exp(1i*2*pi*k*(m(i)*Ts)/Ts));
             h(i,1) = abs(h(i,1));
            end
@@ -112,22 +116,16 @@ classdef channel
            title('|h[t]|');
        end
        
+       function feed = channel_feedback(self)
+            % Random feedback indicators for each channel
+            self.cqi = randi(15,0,1);   %Channel Quality Indicator
+            self.pmi = randi(7,0,1);    %Precoding Matrix Indicator
+            self.ri = randi(7,0,1);     %Rank Indicator
+            feed.cqi = self.cqi;
+            feed.pmi = self.pmi;
+            feed.ri = self.ri;
+       end
+       
+       
    end
 end
-
-% rand Channel Quality Indicator (CQI) {0,15} -> 0 high throughput
-% 0  -> Low Coding Rate & High Modulation
-% 15 -> High Coding Rate (QAM) & Low Modulation
-% High Modulation (64 QAM)
-
-% Low spectral efficiency [bit/sec * Hz]
-% rand Pre-coding Matrix Indicator PMI
-% rand Rank Indicator RI
-
-% Central Unit (Interference between Basestations)
-% Scheduler sets different Subcarriers for User Entities
-
-% Biterror Rate 10^2 -> SNR -> QAM
-
-% Signaling (Round Robin)
-% Resource Element == Spectral Efficiency * T_sym * Delta<F>

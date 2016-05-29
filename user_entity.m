@@ -1,13 +1,10 @@
 classdef user_entity
     properties
-        %identification
         id;
-        %position
         pos;
-        %noise
         noise;
-        %channel
         ch;
+        signaling; %Signaling received from Base Station
     end
    
     methods
@@ -17,6 +14,7 @@ classdef user_entity
             obj.pos = pos_attr;
             obj.noise = noise_attr;
             obj.ch = channel();
+            obj.signaling = [];
         end
 
         function dist = distance(self, b)
@@ -42,6 +40,12 @@ classdef user_entity
             % p_R = p_T - p_L
             s = (b(sel).pwr - self.friis(b(sel))+10*log10(self.ch.ray_chan())) - (interference + self.noise);
         end
-
+          
+        function chan = connect_to_station(self, bs)
+            %Connects user entity to base station
+            bs.user_list = [bs.user_list self];
+            chan = obj.ch;
+        end
+            
     end
 end
