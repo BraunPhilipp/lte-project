@@ -10,10 +10,13 @@ for i = 1:10
     ue(i) = user_entity(i, [randi([0 300], 1, 2)], -135);
 end
 
+cu = central_unit(1,ue,bs);
+cu.map_users();
+
 % ue(1).distance(b(1))
 % ue(1).friis(b(2))
 
-ue(1).snr(bs, 2)
+%ue(1).snr(bs, 2)
 
 % Channel Testing
 % ts = 100;

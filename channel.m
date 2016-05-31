@@ -1,4 +1,5 @@
-classdef channel
+classdef channel < handle
+    
    properties 
       frq  = 10000000 % Channel frequency
       K = 128; % number of subcarriers
@@ -12,9 +13,9 @@ classdef channel
       %L = 0
       % delta f kHz
       df = 180000;
-      cqi; %Channel Quality Indicator
-      pmi; %Precoding Matrix Indicator
-      ri; %Rank Indicator
+      cqi =2; % [0-15]Channel Quality Indicator
+      pmi =0; %Precoding Matrix Indicator
+      ri  =0; %Rank Indicator
    end
    
    methods     
@@ -118,14 +119,13 @@ classdef channel
        
        function feed = channel_feedback(self)
             % Random feedback indicators for each channel
-            self.cqi = randi(15,0,1);   %Channel Quality Indicator
-            self.pmi = randi(7,0,1);    %Precoding Matrix Indicator
-            self.ri = randi(7,0,1);     %Rank Indicator
+            self.cqi = randi(15);   %Channel Quality Indicator
+            self.pmi = randi(7);    %Precoding Matrix Indicator
+            self.ri = randi(7);     %Rank Indicator
             feed.cqi = self.cqi;
             feed.pmi = self.pmi;
             feed.ri = self.ri;
        end
-       
-       
+        
    end
 end

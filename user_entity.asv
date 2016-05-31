@@ -23,8 +23,8 @@ classdef user_entity
             dist = sqrt(sum(tmp_pos.^2));
         end
         
-        function pwr = receiving_pwr(self, b)
-            pwr = b.pwr - self.friis(b);
+        function pwr = receiving_pwr()
+        
         end
         
         function fr = friis(self, b)

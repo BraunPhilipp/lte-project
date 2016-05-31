@@ -18,7 +18,6 @@ classdef central_unit
         
         function map_users(self)
             for base_iter = self.base_list
-                base_iter.user_list = [];
                 for user_iter = self.user_list
                     if (user_iter.receiving_pwr(base_iter) > 74)
                         base_iter.user_list = [base_iter.user_list user_iter];
