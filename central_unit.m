@@ -17,9 +17,12 @@ classdef central_unit
         end
         
         function map_users(self)
+            %adds users to user lists of basestation so that every base
+            %station knows which users to serve
             for base_iter = self.base_list
                 base_iter.user_list = [];
                 for user_iter = self.user_list
+                    %if power is high enough user is added to list
                     if (user_iter.receiving_pwr(base_iter) > 74)
                         base_iter.user_list = [base_iter.user_list user_iter];
                     end

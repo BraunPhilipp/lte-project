@@ -24,25 +24,25 @@ classdef base_station < handle
             obj.user_list = [];
         end
         
-        function sub = subcarrier(self)
-            % Gets 25 independent Subcarriers
-            for i = self.frq-b:self.bndw/25:self.frq+b
-                self.sub(end+1) = i;
-            end
-        end
+%         function sub = subcarrier(self)
+%             % Gets 25 independent Subcarriers
+%             for i = self.frq-self.bndw/2:self.bndw/25:self.frq+self.bndw/2
+%                 self.sub(end+1) = i;
+%             end
+%         end
         
         function sch = scheduling(self)
            % Coordinates scheduling activities (so far, RoundRobin)
            % Problem = what to do with CQI, PMI, RI???
            sch = zeros(length(self.user_list), length(self.sub)); %(empty) signals for all users are generated
            
-           for i = 1:length(self.sub) % Iterates on all subcarriers
-               x = mod(i,length(self.user_list)); % MOD(#Endusers)-th user gets the subcarrier assigned 
-               sch(x,i) = 1; % mere Round-Robin process so far
+           for subc = 1:length(self.sub) % Iterates on all subcarriers
+               n_user = mod(subc,length(self.user_list)); % MOD(#Endusers)-th user gets the subcarrier assigned 
+               sch(n_user,subc) = 1; % mere Round-Robin process so far
            end
            
-           for i = 1:length(self.user_list) % Iterates on all users
-               self.user_list(i).signaling = sch(i); % Sends list of assigned channels
+           for user_list_iter = 1:length(self.user_list) % Iterates on all users
+               self.user_list(user_list_iter).signaling = sch(user_list_iter); % Sends list of assigned channels
            end
            
         end

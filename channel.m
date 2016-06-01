@@ -13,9 +13,6 @@ classdef channel < handle
       %L = 0
       % delta f kHz
       df = 180000;
-      cqi =2; % [0-15]Channel Quality Indicator
-      pmi =0; %Precoding Matrix Indicator
-      ri  =0; %Rank Indicator
    end
    
    methods     
@@ -115,16 +112,6 @@ classdef channel < handle
            subplot(2,2,4)
            stem(x,h);
            title('|h[t]|');
-       end
-       
-       function feed = channel_feedback(self)
-            % Random feedback indicators for each channel
-            self.cqi = randi(15);   %Channel Quality Indicator
-            self.pmi = randi(7);    %Precoding Matrix Indicator
-            self.ri = randi(7);     %Rank Indicator
-            feed.cqi = self.cqi;
-            feed.pmi = self.pmi;
-            feed.ri = self.ri;
        end
         
    end
