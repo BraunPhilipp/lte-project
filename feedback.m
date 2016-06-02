@@ -5,11 +5,11 @@ classdef feedback
     % one basestation and one user entity.
     
     properties
-        n_b_antennas=0; % number of base station antennas
-        n_u_antennas=0; % number of user entity antennas
-        CQI; % Channel quality indicator: (#subcar) X (min(#b_antennas,#u_antennas))
-        RI; % Rank Indicator: (#subcar) X 1; tells number of possible streams
-        PMI; % Precoding Matrix indicator
+        n_b_antennas=1; % number of base station antennas
+        n_u_antennas=1; % number of user entity antennas
+        CQI = zeros(25,1); % Channel quality indicator: (#subcar) X (min(#b_antennas,#u_antennas))
+        RI = zeros(25,1); % Rank Indicator: (#subcar) X 1; tells number of possible streams
+        PMI = 0; % Precoding Matrix indicator
         
     end
     
@@ -41,7 +41,7 @@ classdef feedback
             end
             
             %set values randomly
-            obj.CQI = randi(16,25,max)-1;
+            obj.CQI = randi(15,25,max);
             obj.RI= randi(max,25,1);
             obj.PMI = randi(10);            
             

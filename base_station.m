@@ -47,6 +47,52 @@ classdef base_station < handle
            
         end
         
+        function modu = get_modulation(self)
+            %calculate modulation with highest spectral efficiency
+            f = feedback();
+            f = f.fill_randomly();
+            
+        end
+        
+        function eff = get_efficiency(~,cqi)
+            % give back the spectral efficiency for a given cqi
+            % QPSK from cqi = 1...6
+            % 16QAM from cqi = 6...9
+            % 64QAM from cqi = 10...15
+            switch cqi
+                case 1
+                    eff = 0.1523;
+                case 2
+                    eff = 0.2344;
+                case 3
+                    eff = 0.3770;
+                case 4
+                    eff = 0.6016;
+                case 5
+                    eff = 0.8770;
+                case 6
+                    eff = 1.1758;
+                case 7
+                    eff = 1.4766;
+                case 8
+                    eff = 1.9141;
+                case 9
+                    eff = 2.4063;
+                case 10
+                    eff = 2.7305;
+                case 11
+                    eff = 3.3223;
+                case 12
+                    eff = 3.9023;
+                case 13
+                    eff = 4.5234;
+                case 14
+                    eff = 5.1152;
+                case 15
+                    eff = 5.5547;
+            end
+        end
+                
     end
 end
 
