@@ -30,11 +30,11 @@ classdef feedback
             obj.PMI = 0;                    
         end    
         
-        function obj = fillRandomly(self)
+        function obj = fill_randomly(self)
             obj = feedback(self.n_b_antennas,self.n_u_antennas);
             
             % get max number of streams
-            if obj.n_u_antennas < obj.n_b_antennas_attr
+            if obj.n_u_antennas < obj.n_b_antennas
                 max = obj.n_u_antennas;
             else
                 max = obj.n_b_antennas;

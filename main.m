@@ -7,27 +7,13 @@ bs(4) = base_station(4, 43, [200, 100], 2000000000, 1400000, 5);
 
 % Generate 10 Random Users
 for i = 1:10
-    ue(i) = user_entity(i, [randi([0 300], 1, 2)], -135);
+    ue(i) = user_entity(i, randi([0 300], 1, 2), -135);
 end
 
 cu = central_unit(1,ue,bs);
 cu.map_users();
+cu.base_list.user_list;
 
-% ue(1).distance(b(1))
-% ue(1).friis(b(2))
 
+%clear;
 %ue(1).snr(bs, 2)
-
-% Channel Testing
-% ts = 100;
-% fd = 0.001;
-
-% what to do with rayleighchannel??
-% chan = rayleighchan(ts,fd);
-% x = [repmat(1:1000,1)];
-% y = filter(chan,x);
-
-% plot(y,x)
-
-% chan = channel();
-% chan.ray_chan();

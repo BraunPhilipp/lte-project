@@ -20,7 +20,7 @@ classdef base_station < handle
             obj.frq = frq_attr;
             obj.bndw = bndw_attr;
             obj.gain = gain_attr;
-            obj.sub = [];
+            obj.sub = (frq_attr-bndw_attr/2):(bndw_attr/25):(frq_attr+bndw_attr/2);
             obj.user_list = [];
         end
         
@@ -36,28 +36,74 @@ classdef base_station < handle
            % Problem = what to do with CQI, PMI, RI???
            sch = zeros(length(self.user_list), length(self.sub)); %(empty) signals for all users are generated
            
-           for subc = 1:length(self.sub) % Iterates on all subcarriers
-               n_user = mod(subc,length(self.user_list)); % MOD(#Endusers)-th user gets the subcarrier assigned 
-               sch(n_user,subc) = 1; % mere Round-Robin process so far
+           for subc = 0:(length(self.sub)-1) % Iterates on all subcarriers
+               n_user = mod(subc,length(self.user_list))+1; % MOD(#Endusers)-th user gets the subcarrier assigned 
+               sch(n_user,subc+1) = 1; % mere Round-Robin process so far
            end
            
            for user_list_iter = 1:length(self.user_list) % Iterates on all users
-               self.user_list(user_list_iter).signaling = sch(user_list_iter); % Sends list of assigned channels
+               self.user_list(user_list_iter).signaling = sch(user_list_iter,:); % Sends list of assigned channels
            end
            
         end
         
         function modu = get_modulation(self)
-            %calculate modulation with highest spectral efficiency
-            f = feedback();
-            f = f.fill_randomly();
+            % calculate modulation with highest spectral efficiency
+            %store spectral efficiency in spec_eff:
+            spec_eff = zeros(3,1);
+            % get a feedback from a user:
+            f = self.user_list(1).generate_feedback();
+            % now find out for all modulation modules
+            % 1.modulation = QPSK
+            for subc_iter = 1:25
+                %if user is assigned to given subcarrier:
+                if self.user_list(1).signaling(subc_iter)==1
+                    if f.CQI(subc_iter)>6
+                        % add to spectral efficiency
+                        spec_eff(1) = spec_eff(1) + self.get_efficiency(6)*self.sub(subc_iter);
+                    else
+                        spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                    end
+                end    
+            end
+            % 2.modulation = 16QAM
+            for subc_iter = 1:25
+                %if user is assigned to given subcarrier:
+                if self.user_list(1).signaling(subc_iter)==1
+                    if f.CQI(subc_iter)>9
+                        % add to spectral efficiency
+                        spec_eff(2) = spec_eff(2) + self.get_efficiency(9)*self.sub(subc_iter);
+                    elseif f.CQI(subc_iter)<7
+                        % not sure what to do if CQI is too low for given
+                        % modulation
+                    else
+                        spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                    end
+                end    
+            end
+            % 3.modulation = 64QAM
+            for subc_iter = 1:25
+                %if user is assigned to given subcarrier:
+                if self.user_list(1).signaling(subc_iter)==1
+                    if f.CQI(subc_iter)<10
+                        % not sure what to do if CQI is too low for given
+                        % modulation
+                    else
+                        spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                    end
+                end    
+            end
+            
+            % choose modulation with highest bit/s:
+            [~,modu]= max(spec_eff);
+           
             
         end
         
         function eff = get_efficiency(~,cqi)
             % give back the spectral efficiency for a given cqi
             % QPSK from cqi = 1...6
-            % 16QAM from cqi = 6...9
+            % 16QAM from cqi = 7...9
             % 64QAM from cqi = 10...15
             switch cqi
                 case 1

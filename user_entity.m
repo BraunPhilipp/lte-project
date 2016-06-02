@@ -1,4 +1,4 @@
-classdef user_entity
+classdef user_entity < handle
     properties
         id;
         pos;
@@ -16,7 +16,12 @@ classdef user_entity
             obj.ch = channel();
             obj.signaling = [];
         end
-
+        
+        function feed = generate_feedback(~)
+            feed = feedback(1,1);
+            feed = feed.fill_randomly();
+        end
+        
         function dist = distance(self, b)
             % Calculate Distance between Base Station and User Entity
             tmp_pos = self.pos - b.pos;
