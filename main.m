@@ -14,6 +14,8 @@ cu = central_unit(1,ue,bs);
 cu.map_users();
 cu.base_list.user_list;
 
+cu.base_list(1).scheduling()
+cu.base_list(1).get_modulation()
 
 %clear;
 %ue(1).snr(bs, 2)

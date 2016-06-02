@@ -50,54 +50,58 @@ classdef base_station < handle
         function modu = get_modulation(self)
             % calculate modulation with highest spectral efficiency
             %store spectral efficiency in spec_eff:
-            spec_eff = zeros(3,1);
-            % get a feedback from a user:
-            f = self.user_list(1).generate_feedback();
-            % now find out for all modulation modules
-            % 1.modulation = QPSK
-            for subc_iter = 1:25
-                %if user is assigned to given subcarrier:
-                if self.user_list(1).signaling(subc_iter)==1
-                    if f.CQI(subc_iter)>6
-                        % add to spectral efficiency
-                        spec_eff(1) = spec_eff(1) + self.get_efficiency(6)*self.sub(subc_iter);
-                    else
-                        spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
-                    end
-                end    
-            end
-            % 2.modulation = 16QAM
-            for subc_iter = 1:25
-                %if user is assigned to given subcarrier:
-                if self.user_list(1).signaling(subc_iter)==1
-                    if f.CQI(subc_iter)>9
-                        % add to spectral efficiency
-                        spec_eff(2) = spec_eff(2) + self.get_efficiency(9)*self.sub(subc_iter);
-                    elseif f.CQI(subc_iter)<7
-                        % not sure what to do if CQI is too low for given
-                        % modulation
-                    else
-                        spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
-                    end
-                end    
-            end
-            % 3.modulation = 64QAM
-            for subc_iter = 1:25
-                %if user is assigned to given subcarrier:
-                if self.user_list(1).signaling(subc_iter)==1
-                    if f.CQI(subc_iter)<10
-                        % not sure what to do if CQI is too low for given
-                        % modulation
-                    else
-                        spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
-                    end
-                end    
-            end
+            modu = zeros(length(self.user_list),1);
             
-            % choose modulation with highest bit/s:
-            [~,modu]= max(spec_eff);
-           
-            
+            for user_iter = 1:length(self.user_list)
+                
+                spec_eff = zeros(3,1);
+                % get a feedback from a user:
+                f = self.user_list(user_iter).generate_feedback();
+                % now find out for all modulation modules
+                % 1.modulation = QPSK
+                for subc_iter = 1:25
+                    %if user is assigned to given subcarrier:
+                    if self.user_list(user_iter).signaling(subc_iter)==1
+                        if f.CQI(subc_iter)>6
+                            % add to spectral efficiency
+                            spec_eff(1) = spec_eff(1) + self.get_efficiency(6)*self.sub(subc_iter);
+                        else
+                            spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                        end
+                    end    
+                end
+                % 2.modulation = 16QAM
+                for subc_iter = 1:25
+                    %if user is assigned to given subcarrier:
+                    if self.user_list(user_iter).signaling(subc_iter)==1
+                        if f.CQI(subc_iter)>9
+                            % add to spectral efficiency
+                            spec_eff(2) = spec_eff(2) + self.get_efficiency(9)*self.sub(subc_iter);
+                        elseif f.CQI(subc_iter)<7
+                            % not sure what to do if CQI is too low for given
+                            % modulation
+                        else
+                            spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                        end
+                    end    
+                end
+                % 3.modulation = 64QAM
+                for subc_iter = 1:25
+                    %if user is assigned to given subcarrier:
+                    if self.user_list(user_iter).signaling(subc_iter)==1
+                        if f.CQI(subc_iter)<10
+                            % not sure what to do if CQI is too low for given
+                            % modulation
+                        else
+                            spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                        end
+                    end    
+                end
+
+                % choose modulation with highest bit/s:
+                [~,modu(user_iter)]= max(spec_eff);
+            end
+                       
         end
         
         function eff = get_efficiency(~,cqi)
