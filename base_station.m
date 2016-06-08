@@ -20,7 +20,8 @@ classdef base_station < handle
             obj.frq = frq_attr;
             obj.bndw = bndw_attr;
             obj.gain = gain_attr;
-            obj.sub = (frq_attr-bndw_attr/2):(bndw_attr/25):(frq_attr+bndw_attr/2);
+            %obj.sub = (frq_attr-bndw_attr/2):(bndw_attr/25):(frq_attr+bndw_attr/2);
+            
             obj.user_list = [];
         end
         
@@ -34,9 +35,11 @@ classdef base_station < handle
         function sch = scheduling(self)
            % Coordinates scheduling activities (so far, RoundRobin)
            % Problem = what to do with CQI, PMI, RI???
-           sch = zeros(length(self.user_list), length(self.sub)); %(empty) signals for all users are generated
+           param = feed_param();
+           numb_sub = param(2).n_subcarriers; %number of subcarriers
+           sch = zeros(length(self.user_list), numb_sub); %(empty) signals for all users are generated
            
-           for subc = 0:(length(self.sub)-1) % Iterates on all subcarriers
+           for subc = 0:(numb_sub-1) % Iterates on all subcarriers
                n_user = mod(subc,length(self.user_list))+1; % MOD(#Endusers)-th user gets the subcarrier assigned 
                sch(n_user,subc+1) = 1; % mere Round-Robin process so far
            end
@@ -57,9 +60,10 @@ classdef base_station < handle
                 spec_eff = zeros(3,1);
                 % get a feedback from a user:
                 f = self.user_list(user_iter).generate_feedback();
+                self.sub =(self.frq-self.bndw/2):(self.bndw/f.n_subcarriers):(self.frq+self.bndw/2); %dynamically generated using number of subcarriers
                 % now find out for all modulation modules
                 % 1.modulation = QPSK
-                for subc_iter = 1:25
+                for subc_iter = 1:f.n_subcarriers
                     %if user is assigned to given subcarrier:
                     if self.user_list(user_iter).signaling(subc_iter)==1
                         if f.CQI(subc_iter)>6
@@ -70,8 +74,13 @@ classdef base_station < handle
                         end
                     end    
                 end
+                % bottleneck = smallest CQI value -> should be transmitted
+                % spectral efficiency = smallest efficiency
+                % data rate = spectral efficiency * df(subcarrier) * number
+                % of subcarriers
+                % packet = data rate * time (1 ms)
                 % 2.modulation = 16QAM
-                for subc_iter = 1:25
+                for subc_iter = 1:f.n_subcarriers
                     %if user is assigned to given subcarrier:
                     if self.user_list(user_iter).signaling(subc_iter)==1
                         if f.CQI(subc_iter)>9
@@ -86,7 +95,7 @@ classdef base_station < handle
                     end    
                 end
                 % 3.modulation = 64QAM
-                for subc_iter = 1:25
+                for subc_iter = 1:f.n_subcarriers
                     %if user is assigned to given subcarrier:
                     if self.user_list(user_iter).signaling(subc_iter)==1
                         if f.CQI(subc_iter)<10

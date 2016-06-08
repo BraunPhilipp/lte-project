@@ -30,6 +30,11 @@ classdef central_unit
             end
         end
         
+        %COORDINATED SCHEDULING
+        %conf = cell(n,n)
+        %within each cell is an array of all the users
+        %conf (2,1) =  [UE1, UE2, ...]
+        
         %komische Funktion:
 %         function stations = add_station(self,base)
 %             %Adds station to the list

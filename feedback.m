@@ -5,33 +5,39 @@ classdef feedback
     % one basestation and one user entity.
     
     properties
-        n_b_antennas=1; % number of base station antennas
-        n_u_antennas=1; % number of user entity antennas
-        CQI = zeros(25,1); % Channel quality indicator: (#subcar) X (min(#b_antennas,#u_antennas))
-        RI = zeros(25,1); % Rank Indicator: (#subcar) X 1; tells number of possible streams
+        n_b_antennas; % number of base station antennas
+        n_u_antennas; % number of user entity antennas
+        n_subcarriers; %number of subcarriers
+        CQI; % Channel quality indicator: (#subcar) X (min(#b_antennas,#u_antennas))
+        RI; % Rank Indicator: (#subcar) X 1; tells number of possible streams
         PMI = 0; % Precoding Matrix indicator
+        
+        %replace with parameters for number of subcarriers/base
+        %antennas/user antennas
         
     end
     
     methods
-        function obj = feedback(n_b_antennas_attr, n_u_antennas_attr)
-            obj.n_b_antennas = n_b_antennas_attr;
-            obj.n_u_antennas = n_u_antennas_attr;
+        function obj = feedback()
+            parameters = feed_param();
+            obj.n_b_antennas = parameters(2).n_b_antennas;
+            obj.n_u_antennas = parameters(2).n_u_antennas;
+            obj.n_subcarriers = parameters(2).n_subcarriers;
             
             % get max number of streams
-            if n_u_antennas_attr < n_b_antennas_attr
-                max = n_u_antennas_attr;
+            if obj.n_u_antennas < obj.n_b_antennas
+                max = obj.n_u_antennas;
             else
-                max = n_b_antennas_attr;
+                max = obj.n_b_antennas;
             end
             % initialize CQI
-            obj.CQI = zeros(25,max);
-            obj.RI = zeros(25,1);
+            obj.CQI = zeros(obj.n_subcarriers,max);
+            obj.RI = zeros(obj.n_subcarriers,1);
             obj.PMI = 0;                    
         end    
         
         function obj = fill_randomly(self)
-            obj = feedback(self.n_b_antennas,self.n_u_antennas);
+            obj = feedback();
             
             % get max number of streams
             if obj.n_u_antennas < obj.n_b_antennas
@@ -41,8 +47,8 @@ classdef feedback
             end
             
             %set values randomly
-            obj.CQI = randi(15,25,max);
-            obj.RI= randi(max,25,1);
+            obj.CQI = randi(15,obj.n_subcarriers,max);
+            obj.RI= randi(max,obj.n_subcarriers,1);
             obj.PMI = randi(10);            
             
             

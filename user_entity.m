@@ -18,7 +18,7 @@ classdef user_entity < handle
         end
         
         function feed = generate_feedback(~)
-            feed = feedback(1,1);
+            feed = feedback();
             feed = feed.fill_randomly();
         end
         
