@@ -39,6 +39,8 @@ classdef user_entity < handle
         end
         
         function s = snr(self, b, sel)
+            % b = list of basestations
+            % sel = index of selected basestation 
             % Returns Signal-To-Noise Ratio
             interference = 0;
             % Sum over all elements except #sel
@@ -47,7 +49,8 @@ classdef user_entity < handle
             end
             interference = interference - ( b(sel).pwr - self.friis(b(sel)));
             % p_R = p_T - p_L
-            s = (b(sel).pwr - self.friis(b(sel))+10*log10(self.ch.ray_chan())) - (interference + self.noise);
+            %s = (b(sel).pwr - self.friis(b(sel))+10*log10(self.ch.ray_chan())) - (interference + self.noise);
+            s = (b(sel).pwr - self.friis(b(sel))) - (interference + self.noise);
         end
             
     end
