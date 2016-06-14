@@ -16,7 +16,7 @@ classdef central_unit < handle
             obj.id = id_attr;
             obj.user_list = user_attr;
             obj.base_list = base_attr;
-            obj.maps_given = [0,0];     % 0,0 means map1 and map2 have not been given to the basestations
+            obj.maps_given = [1,1];     % 1,1 means map1 and map2 have been given to the basestations
             % obj.conflict_list = [];
         end
         
@@ -116,7 +116,7 @@ classdef central_unit < handle
         function  empty_user_lists(self)
             % empty the list of the users in every basestation
             for base_iter = 1:length(self.base_list)
-                self.base_list(base_iter).user_list=[];
+                self.base_list(base_iter).user_list=nan;
             end
         end
         
@@ -136,11 +136,14 @@ classdef central_unit < handle
             else
                 % if both maps are given to the basestations generate new
                 % maps
-                self.map_users_CS();                
+                self.map_users_CS();  
+                self.maps_given(1)=1;
+                self.maps_given(2)=0;
+                map_sel =1;
             end
             for user_iter = 1:length(self.user_list)
                 if self.maps(user_iter, map_sel)~=0
-                    self.base_list(map(user_iter)).base_list(end+1)=self.user_list(user_iter);
+                    self.base_list(self.maps(user_iter, map_sel)).user_list(end+1)=self.user_list(user_iter);
                 end
             end
         end
