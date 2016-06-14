@@ -6,19 +6,21 @@ classdef base_station < handle
         pos; % m [x y]
         frq; % Hz
         bndw; % Hz
+        delta_freq;
         gain;
-        sub;
+        n_subc;
         user_list; %List of connected user entities
     end
    
     methods
-        function obj = base_station(id_attr, pwr_attr, pos_attr, frq_attr, bndw_attr, gain_attr)
+        function obj = base_station(id_attr, pwr_attr, pos_attr, frq_attr, n_subc_attr, bndw_attr, gain_attr)
             % Constructor
             obj.id = id_attr;
             obj.pwr = pwr_attr;
             obj.pos = pos_attr;
             obj.frq = frq_attr;
             obj.bndw = bndw_attr;
+            obj.n_subc = n_subc_attr;
             obj.gain = gain_attr;
             %obj.sub = (frq_attr-bndw_attr/2):(bndw_attr/25):(frq_attr+bndw_attr/2);
             
@@ -52,7 +54,7 @@ classdef base_station < handle
         
         function modu = get_modulation(self)
             % calculate modulation with highest spectral efficiency
-            %store spectral efficiency in spec_eff:
+            % store spectral efficiency in spec_eff:
             modu = zeros(length(self.user_list),1);
             
             for user_iter = 1:length(self.user_list)
@@ -60,17 +62,16 @@ classdef base_station < handle
                 spec_eff = zeros(3,1);
                 % get a feedback from a user:
                 f = self.user_list(user_iter).generate_feedback();
-                self.sub =(self.frq-self.bndw/2):(self.bndw/f.n_subcarriers):(self.frq+self.bndw/2); %dynamically generated using number of subcarriers
                 % now find out for all modulation modules
                 % 1.modulation = QPSK
-                for subc_iter = 1:f.n_subcarriers
+                for subc_iter = 1:self.n_subc
                     %if user is assigned to given subcarrier:
                     if self.user_list(user_iter).signaling(subc_iter)==1
                         if f.CQI(subc_iter)>6
                             % add to spectral efficiency
-                            spec_eff(1) = spec_eff(1) + self.get_efficiency(6)*self.sub(subc_iter);
+                            spec_eff(1) = spec_eff(1) + self.get_efficiency(6);
                         else
-                            spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                            spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI(subc_iter));
                         end
                     end    
                 end
@@ -85,12 +86,12 @@ classdef base_station < handle
                     if self.user_list(user_iter).signaling(subc_iter)==1
                         if f.CQI(subc_iter)>9
                             % add to spectral efficiency
-                            spec_eff(2) = spec_eff(2) + self.get_efficiency(9)*self.sub(subc_iter);
+                            spec_eff(2) = spec_eff(2) + self.get_efficiency(9);
                         elseif f.CQI(subc_iter)<7
                             % not sure what to do if CQI is too low for given
                             % modulation
                         else
-                            spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                            spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI(subc_iter));
                         end
                     end    
                 end
@@ -102,7 +103,7 @@ classdef base_station < handle
                             % not sure what to do if CQI is too low for given
                             % modulation
                         else
-                            spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI(subc_iter))*self.sub(subc_iter);
+                            spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI(subc_iter));
                         end
                     end    
                 end

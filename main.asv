@@ -10,11 +10,14 @@ for i = 1:25
     ue(i) = user_entity(i, randi([0 300], 1, 2), -135);
 end
 
-% initialize central unit
-cu = central_unit(1,ue,bs);
-
 % Simulate Transmission
-cu.simulate();
+% initialize central uni
+
+for t = 1:1000
+end
+
+cu = central_unit(1,ue,bs);
+cu.list_of_conflicts()
 
 %cu.base_list.user_list;
 
