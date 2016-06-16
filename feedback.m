@@ -19,10 +19,10 @@ classdef feedback
     
     methods
         function obj = feedback()
-            parameters = feed_param();
-            obj.n_b_antennas = parameters(2).n_b_antennas;
-            obj.n_u_antennas = parameters(2).n_u_antennas;
-            obj.n_subcarriers = parameters(2).n_subcarriers;
+            %parameters = feed_param();
+            obj.n_b_antennas = parameter_file.n_b_antennas(parameter_file.num_simul);
+            obj.n_u_antennas = parameter_file.n_u_antennas(parameter_file.num_simul);
+            obj.n_subcarriers = parameter_file.n_feed_subcarriers(parameter_file.num_simul);
             
             % get max number of streams
             if obj.n_u_antennas < obj.n_b_antennas

@@ -1,18 +1,18 @@
-classdef channel < handle
+classdef channel < handle    
     
    properties 
-      frq  = 10000000 % Channel frequency
-      K = 128; % number of subcarriers
+      frq  = parameter_file.chan_freq(parameter_file.num_simul); % Channel frequency
+      K = parameter_file.n_chan_subcarriers(parameter_file.num_simul); % number of subcarriers
       % Power delay profile
       % compare Table B.2-3 Extended Typical Urban model (ETU)
       % delay[ns] | relative power[dB]
       % pdp := Power Delay Profile
-      pdp = [0 -1; 50 -1; 120 -1; 200 0; 230 0; 500 0; 1600 -3; 2300 -5; 5000 -7];
-      
+      %pdp = [0 -1; 50 -1; 120 -1; 200 0; 230 0; 500 0; 1600 -3; 2300 -5; 5000 -7];
+      pdp = parameter_file.chan_pdp(parameter_file.num_simul);
       %L = length of received signal
       %L = 0
       % delta f kHz
-      df = 180000;
+      df = parameter_file.chan_df(parameter_file.num_simul);
    end
    
    methods     

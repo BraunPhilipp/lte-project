@@ -39,8 +39,8 @@ classdef base_station < handle
            % Problem = what to do with CQI, PMI, RI???
            self.id
            if isempty(self.user_list)==0
-               param = feed_param();
-               numb_sub = param(2).n_subcarriers; %number of subcarriers
+               %param = feed_param();
+               numb_sub = parameter_file.n_feed_subcarriers(parameter_file.num_simul); %number of subcarriers
                sch = zeros(length(self.user_list), numb_sub); %(empty) signals for all users are generated
 
                for subc = 0:(numb_sub-1) % Iterates on all subcarriers
