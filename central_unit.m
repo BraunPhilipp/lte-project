@@ -116,7 +116,7 @@ classdef central_unit < handle
         function  empty_user_lists(self)
             % empty the list of the users in every basestation
             for base_iter = 1:length(self.base_list)
-                self.base_list(base_iter).user_list=nan;
+                self.base_list(base_iter).user_list=[];
             end
         end
         
@@ -143,15 +143,18 @@ classdef central_unit < handle
             end
             for user_iter = 1:length(self.user_list)
                 if self.maps(user_iter, map_sel)~=0
-                    self.base_list(self.maps(user_iter, map_sel)).user_list(end+1)=self.user_list(user_iter);
+                    self.base_list(self.maps(user_iter, map_sel)).user_list= [self.base_list(self.maps(user_iter, map_sel)).user_list self.user_list(user_iter)];
                 end
             end
         end
         
         function simulate(self)
             self.give_map_to_bs();
-            self.base_list.scheduling();
-            self.base_list.get_modulation();
+            for i = 1:length(self.base_list)
+                self.base_list(i).scheduling();
+                self.base_list(i).get_modulation();
+            end
+            
         end
         
         %COORDINATED SCHEDULING

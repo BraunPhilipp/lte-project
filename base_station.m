@@ -37,17 +37,22 @@ classdef base_station < handle
         function sch = scheduling(self)
            % Coordinates scheduling activities (so far, RoundRobin)
            % Problem = what to do with CQI, PMI, RI???
-           param = feed_param();
-           numb_sub = param(2).n_subcarriers; %number of subcarriers
-           sch = zeros(length(self.user_list), numb_sub); %(empty) signals for all users are generated
-           
-           for subc = 0:(numb_sub-1) % Iterates on all subcarriers
-               n_user = mod(subc,length(self.user_list))+1; % MOD(#Endusers)-th user gets the subcarrier assigned 
-               sch(n_user,subc+1) = 1; % mere Round-Robin process so far
-           end
-           
-           for user_list_iter = 1:length(self.user_list) % Iterates on all users
-               self.user_list(user_list_iter).signaling = sch(user_list_iter,:); % Sends list of assigned channels
+           self.id
+           if isempty(self.user_list)==0
+               param = feed_param();
+               numb_sub = param(2).n_subcarriers; %number of subcarriers
+               sch = zeros(length(self.user_list), numb_sub); %(empty) signals for all users are generated
+
+               for subc = 0:(numb_sub-1) % Iterates on all subcarriers
+                   n_user = mod(subc,length(self.user_list))+1; % MOD(#Endusers)-th user gets the subcarrier assigned 
+                   sch(n_user,subc+1) = 1; % mere Round-Robin process so far
+               end
+
+               for user_list_iter = 1:length(self.user_list) % Iterates on all users
+                   self.user_list(user_list_iter).signaling = sch(user_list_iter,:); % Sends list of assigned channels
+               end
+           else
+               sch = -1;
            end
            
         end
