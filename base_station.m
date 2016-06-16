@@ -1,125 +1,120 @@
 classdef base_station < handle
     % Base Station
     properties
-        id; 
-        pwr; % dBm
+        id;
         pos; % m [x y]
+        pwr; % dBm
+        gain;
+        
         frq; % Hz
         bndw; % Hz
-        delta_freq;
-        gain;
-        n_subc;
-        user_list; %List of connected user entities
+        
+        user_list;
+        
+        subcarr_num;
+        antenna_num;
     end
    
     methods
-        function obj = base_station(id_attr, pwr_attr, pos_attr, frq_attr, n_subc_attr, bndw_attr, gain_attr)
+        function obj = base_station(id_attr, pos_attr, pwr_attr, gain_attr, ...
+                                            frq_attr, bndw_attr, subc_attr, antn_attr)
             % Constructor
             obj.id = id_attr;
-            obj.pwr = pwr_attr;
             obj.pos = pos_attr;
+            obj.pwr = pwr_attr;
+            obj.gain = gain_attr;
+            
             obj.frq = frq_attr;
             obj.bndw = bndw_attr;
-            obj.n_subc = n_subc_attr;
-            obj.gain = gain_attr;
-            %obj.sub = (frq_attr-bndw_attr/2):(bndw_attr/25):(frq_attr+bndw_attr/2);
             
             obj.user_list = [];
+            
+            obj.subcarr_num = subc_attr;
+            obj.antenna_num = antn_attr;
         end
-        
-%         function sub = subcarrier(self)
-%             % Gets 25 independent Subcarriers
-%             for i = self.frq-self.bndw/2:self.bndw/25:self.frq+self.bndw/2
-%                 self.sub(end+1) = i;
-%             end
-%         end
         
         function sch = scheduling(self)
-           % Coordinates scheduling activities (so far, RoundRobin)
-           % Problem = what to do with CQI, PMI, RI???
-           self.id
-           if isempty(self.user_list)==0
-               %param = feed_param();
-               numb_sub = parameter_file.n_feed_subcarriers(parameter_file.num_simul); %number of subcarriers
-               sch = zeros(length(self.user_list), numb_sub); %(empty) signals for all users are generated
-
-               for subc = 0:(numb_sub-1) % Iterates on all subcarriers
-                   n_user = mod(subc,length(self.user_list))+1; % MOD(#Endusers)-th user gets the subcarrier assigned 
-                   sch(n_user,subc+1) = 1; % mere Round-Robin process so far
-               end
-
-               for user_list_iter = 1:length(self.user_list) % Iterates on all users
-                   self.user_list(user_list_iter).signaling = sch(user_list_iter,:); % Sends list of assigned channels
-               end
-           else
-               sch = -1;
-           end
-           
-        end
-        
-        function modu = get_modulation(self)
-            % calculate modulation with highest spectral efficiency
-            % store spectral efficiency in spec_eff:
-            modu = zeros(length(self.user_list),1);
-            
-            for user_iter = 1:length(self.user_list)
+            % Coordinates scheduling activities (mere RoundRobin so fardd)
+            if (~isempty(self.user_list))
+                % Generate empty Signals for all users
+                sch = zeros(length(self.user_list), self.subcarr_num);
+                sb_sch = zeros(self.subcarr_num,1); % used to display round robin
+                % Iterates over all subcarriers
+                for subc = 0:(self.subcarr_num-1)
+                    % MOD(#Endusers)-th user gets the subcarrier assigned
+                    n_user = mod(subc,length(self.user_list))+1;
+                    sch(n_user,subc+1) = 1;
+                    sb_sch(subc+1) = n_user;
+                end
                 
-                spec_eff = zeros(3,1);
-                % get a feedback from a user:
-                f = self.user_list(user_iter).generate_feedback();
-                % now find out for all modulation modules
-                % 1.modulation = QPSK
-                for subc_iter = 1:self.n_subc
-                    %if user is assigned to given subcarrier:
-                    if self.user_list(user_iter).signaling(subc_iter)==1
-                        if f.CQI(subc_iter)>6
-                            % add to spectral efficiency
-                            spec_eff(1) = spec_eff(1) + self.get_efficiency(6);
-                        else
-                            spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI(subc_iter));
-                        end
-                    end    
+                % Output Scheduling
+                fprintf('Scheduling: ');
+                fprintf('%i ', sb_sch');
+                fprintf('\n');
+                
+                % Iterate over all users
+                for user_iter = 1:length(self.user_list)
+                    % Sends list of assigned channels
+                    self.user_list(user_iter).signaling = sch(user_iter,:);
                 end
-                % bottleneck = smallest CQI value -> should be transmitted
-                % spectral efficiency = smallest efficiency
-                % data rate = spectral efficiency * df(subcarrier) * number
-                % of subcarriers
-                % packet = data rate * time (1 ms)
-                % 2.modulation = 16QAM
-                for subc_iter = 1:f.n_subcarriers
-                    %if user is assigned to given subcarrier:
-                    if self.user_list(user_iter).signaling(subc_iter)==1
-                        if f.CQI(subc_iter)>9
-                            % add to spectral efficiency
-                            spec_eff(2) = spec_eff(2) + self.get_efficiency(9);
-                        elseif f.CQI(subc_iter)<7
-                            % not sure what to do if CQI is too low for given
-                            % modulation
-                        else
-                            spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI(subc_iter));
-                        end
-                    end    
-                end
-                % 3.modulation = 64QAM
-                for subc_iter = 1:f.n_subcarriers
-                    %if user is assigned to given subcarrier:
-                    if self.user_list(user_iter).signaling(subc_iter)==1
-                        if f.CQI(subc_iter)<10
-                            % not sure what to do if CQI is too low for given
-                            % modulation
-                        else
-                            spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI(subc_iter));
-                        end
-                    end    
-                end
-
-                % choose modulation with highest bit/s:
-                [~,modu(user_iter)]= max(spec_eff);
+            else
+                sch = -1;
             end
-                       
         end
         
-        function eff = get_efficiency(~,cqi)
+        function modu = modulation(self)
+            if (~isempty(self.user_list))
+                % Calculate modulation with highest spectral efficiency
+                % store spectral efficiency in spec_eff
+                modu = zeros(length(self.user_list),1);
+
+                for user_iter = 1:length(self.user_list)
+                    % Initialize Spectral Efficiency
+                    spec_eff = zeros(3,1);
+                    % Get a feedback from a user
+                    f = self.user_list(user_iter).feedback(self);
+
+                    % Modulation #1 = QPSK
+                    if (f.CQI > 6)
+                        spec_eff(1) = spec_eff(1) + self.get_efficiency(6);
+                    else
+                        spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI);
+                    end
+
+                    % bottleneck = smallest CQI value -> should be transmitted
+                    % spectral efficiency = smallest efficiency
+                    % data rate = spectral efficiency * df(subcarrier) * number
+                    % of subcarriers
+                    % packet = data rate * time (1 ms)
+
+                    % Modulation #2 = 16QAM
+                    if (f.CQI > 9)
+                        spec_eff(2) = spec_eff(2) + self.get_efficiency(9);
+                    elseif f.CQI < 7
+                        % CQI too low for given modulation
+                    else
+                        spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI);
+                    end
+
+                    % Modulation #3 = 64QAM
+                    if (f.CQI < 10)
+                        % CQI too low for given modulation
+                    else
+                        spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI);
+                    end
+
+                    % Choose Modulation with highest bit/s:
+                    [~,modu(user_iter)] = max(spec_eff);
+                end
+
+                % Return Modulation
+                fprintf('Modulation: ');
+                fprintf('%i ', modu');
+                fprintf('\n');
+            end
+        end
+        
+        function eff = get_efficiency(~, cqi)
             % give back the spectral efficiency for a given cqi
             % QPSK from cqi = 1...6
             % 16QAM from cqi = 7...9
@@ -160,20 +155,3 @@ classdef base_station < handle
                 
     end
 end
-
-% rand Channel Quality Indicator (CQI) {0,15} -> 0 high throughput
-% 0  -> Low Coding Rate & High Modulation
-% 15 -> High Coding Rate (QAM) & Low Modulation
-% High Modulation (64 QAM)
-
-% Low spectral efficiency [bit/sec * Hz]
-% rand Pre-coding Matrix Indicator PMI
-% rand Rank Indicator RI
-
-% Central Unit (Interference between Basestations)
-% Scheduler sets different Subcarriers for User Entities
-
-% Biterror Rate 10^2 -> SNR -> QAM
-
-% Signaling (Round Robin)
-% Resource Element == Spectral Efficiency * T_sym * Delta<F>

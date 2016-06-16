@@ -1,28 +1,42 @@
 clear
+
 % Generate 4 Base Stations
-for i = 1:parameter_file.n_basestations(parameter_file.num_simul)
-    bs(i) = base_station(i, 43, randi([0 300], 1, 2), 2000000000,25, 1400000, 8);
+for i = 1:params.num_basestations
+    bs(i) = base_station(i, randi([0 300], 1, 2), 61, 8, 2000000000, 1400000, 8, randi([8,16]));
 end
-% bs(1) = base_station(1, 43, [100, 100], 2000000000,25, 1400000, 8);
-% bs(2) = base_station(2, 43, [100, 200], 2000000000,25, 1400000, 6);
-% bs(3) = base_station(3, 43, [200, 200], 2000000000,25, 1400000, 10);
-% bs(4) = base_station(4, 43, [200, 100], 2000000000,25, 1400000, 5);
 
 % Generate 32 Random Users
-for i = 1:parameter_file.n_users(parameter_file.num_simul)
-    ue(i) = user_entity(i, randi([0 300], 1, 2), -135);
+for i = 1:params.num_users
+    ue(i) = user_entity(i, randi([0 300], 1, 2), -135, randi([1,4]));
 end
 
-% initialize central unit
+% Initialize Central Unit
 cu = central_unit(1,ue,bs);
 
-% Simulate Transmission
-cu.simulate();
+% % Simulate Transmission
+% for delta = 1:10
+%     cu.map_users();
+%     for i = 1:length(bs)
+%         cu.base_list(i).scheduling();
+%         cu.base_list(i).modulation(); % some error while choosing modulation
+%     end
+% end
 
-%cu.base_list.user_list;
 
-%cu.base_list(1).scheduling()
-%cu.base_list(1).get_modulation()
+% DRAW
 
-%clear;
-%ue(1).snr(bs, 2)
+% Display User Positions
+for user_iter = 1:length(ue)
+    x = ue(user_iter).pos(1);
+    y = ue(user_iter).pos(2);
+    plot(x,y,'-ob');
+    hold on;
+end
+
+% Display Basestation Positions
+for base_iter = 1:length(bs)
+    x = bs(base_iter).pos(1);
+    y = bs(base_iter).pos(2);
+    plot(x,y,'-*r');
+    hold on;
+end
