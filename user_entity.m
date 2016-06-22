@@ -6,6 +6,7 @@ classdef user_entity < handle
         ch;
         signaling;
         antenna_num;
+        conflict = 0;          %signals whether user is in a conflict
     end
    
     methods
