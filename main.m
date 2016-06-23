@@ -15,7 +15,8 @@ cu = central_unit(1,ue,bs);
 
 % Simulate Transmission
 for delta = 1:5
-    cu.map_users();
+    cu.map_users_dp();
+%    cu.map_users_cs();
     for i = 1:length(bs)
         cu.base_list(i).scheduling();
         cu.base_list(i).modulation();
@@ -23,22 +24,25 @@ for delta = 1:5
     end
 end
 
-
-
-% DRAW
-
-% Display User Positions
-% for user_iter = 1:length(ue)
-%     x = ue(user_iter).pos(1);
-%     y = ue(user_iter).pos(2);
-%     plot(x,y,'-ob');
-%     hold on;
-% end
-% 
-% % Display Basestation Positions
-% for base_iter = 1:length(bs)
-%     x = bs(base_iter).pos(1);
-%     y = bs(base_iter).pos(2);
-%     plot(x,y,'-*r');
-%     hold on;
-% end
+% Draw Basestation and User Positions
+for base_iter = 1:length(cu.base_list)
+    for user_iter = 1:length(cu.base_list(base_iter).user_list)   
+        x = cu.base_list(base_iter).user_list(user_iter).pos(1);
+        y = cu.base_list(base_iter).user_list(user_iter).pos(2);
+        if cu.base_list(base_iter).user_list(user_iter).conflict == 1
+            plot(x,y,'-xm');
+            hold on;
+        else
+            plot(x,y,'-or');
+            hold on;
+        end
+        labels = cellstr(num2str(base_iter));
+        text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+    end
+    x = cu.base_list(base_iter).pos(1);
+    y = cu.base_list(base_iter).pos(2);
+    plot(x,y,'-ob');
+    labels = cellstr(num2str(base_iter));
+    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+    hold on;
+end

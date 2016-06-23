@@ -101,7 +101,7 @@ classdef central_unit < handle
             conf_matr;
         end
         
-        function map_users(self)
+        function map_users_cs(self)
             % map defines to which basestation a user is mapped. For Example 
             % map(4)=3 means that user 4 is mapped to basestation 3.
             % continuously mutes signals of all other basestations
@@ -129,7 +129,7 @@ classdef central_unit < handle
                             Index = randi(length(conf(user_iter,:)));
                             sel_user = conf(user_iter, Index); 
                         end
-                        % ignore unmapped users
+                        % Ignore unmapped users
                         for user_iter2 = 1:length(self.user_list)
                             if conf(user_iter, user_iter2) > 0
                                 ignore = [ignore user_iter2];
@@ -152,44 +152,34 @@ classdef central_unit < handle
             end
             
             self.map_to_basestation();
-    % Display Positions for all Users
-%             for user_iter = 1:length(self.user_list)
-%                 x = self.user_list(user_iter).pos(1);
-%                 y = self.user_list(user_iter).pos(2);
-%                 if self.user_list(user_iter).conflict == 1
-%                     plot(x,y,'-xg');
-%                     hold on;
-%                 else
-%                     plot(x,y,'-ob');
-%                     hold on;
-%                 end
-%             end
-
-    % Display Basestation and user Positions
-            for base_iter = 1:length(self.base_list)
-                for user_iter = 1:length(self.base_list(base_iter).user_list)   
-                    x = self.base_list(base_iter).user_list(user_iter).pos(1);
-                    y = self.base_list(base_iter).user_list(user_iter).pos(2);
-                    if self.base_list(base_iter).user_list(user_iter).conflict == 1
-                        plot(x,y,'-xm');
-                        hold on;
-                    else
-                        plot(x,y,'-or');
-                        hold on;
-                    end
-                    labels = cellstr(num2str(base_iter));
-                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
-                end
-                x = self.base_list(base_iter).pos(1);
-                y = self.base_list(base_iter).pos(2);
-                plot(x,y,'-ob');
-                labels = cellstr(num2str(base_iter));
-                text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
-                hold on;
-            end
             
             % Return map
             map;
+        end
+        
+        function map_users_dp(self)
+            % map defines to which basestation a user is mapped. For Example 
+            % map(4)=3 means that user 4 is mapped to basestation 3.
+            % continuously mutes signals of all other basestations
+            
+            % user served by basestation with best signal
+            
+            % Clear Lists for Simulation
+            self.base_map = [];
+            self.user_map = [];
+            
+            map = zeros(length(self.user_list),1);
+            map = self.ranking();
+            self.base_map = map;
+            
+            self.user_map = cell(length(self.base_list),1);
+            for map_iter = 1:length(map)
+                if map(map_iter) > 0
+                    self.user_map{map(map_iter)} = [self.user_map{map(map_iter)}, map_iter];
+                end
+            end
+            
+            self.map_to_basestation();
         end
         
         function map_to_basestation(self)
