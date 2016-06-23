@@ -14,11 +14,12 @@ end
 cu = central_unit(1,ue,bs);
 
 % Simulate Transmission
-for delta = 1:10
+for delta = 1:5
     cu.map_users();
     for i = 1:length(bs)
         cu.base_list(i).scheduling();
-        cu.base_list(i).modulation(); % some error while choosing modulation
+        cu.base_list(i).modulation();
+        cu.base_list(i).beamforming();
     end
 end
 

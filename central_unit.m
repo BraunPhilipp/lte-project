@@ -174,7 +174,7 @@ classdef central_unit < handle
                         plot(x,y,'-xm');
                         hold on;
                     else
-                        plot(x,y,'-ok');
+                        plot(x,y,'-or');
                         hold on;
                     end
                     labels = cellstr(num2str(base_iter));
@@ -182,7 +182,7 @@ classdef central_unit < handle
                 end
                 x = self.base_list(base_iter).pos(1);
                 y = self.base_list(base_iter).pos(2);
-                plot(x,y,'-*b');
+                plot(x,y,'-ob');
                 labels = cellstr(num2str(base_iter));
                 text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
                 hold on;

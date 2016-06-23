@@ -13,6 +13,10 @@ classdef base_station < handle
         
         subcarr_num;
         antenna_num;
+        
+        schd;
+        modu;
+        beam;
     end
    
     methods
@@ -31,9 +35,31 @@ classdef base_station < handle
             
             obj.subcarr_num = subc_attr;
             obj.antenna_num = antn_attr;
+            
+            obj.schd = [];
+            obj.modu = [];
+            obj.beam = [];
+        end
+        
+        function beam = beamforming(self)
+            if (~isempty(self.user_list))
+                schd = zeros(length(self.schd),1);
+                for schd_iter = 1:length(self.schd)
+                    % count previous occurences
+                    num_occ = sum(self.schd(schd_iter) == self.schd(1:schd_iter)) - 1;
+                    schd(schd_iter) = num_occ;
+                end
+                % Output Phaseshift
+                fprintf('Phase Shift: ');
+                fprintf('%i ', schd);
+                fprintf('\n');
+                
+                self.schd = schd;
+            end
         end
         
         function sch = scheduling(self)
+            fprintf('> Basestation: %i\n', self.id);
             % Coordinates scheduling activities (mere RoundRobin so fardd)
             if (~isempty(self.user_list))
                 % Generate empty Signals for all users
@@ -52,6 +78,8 @@ classdef base_station < handle
                 fprintf('%i ', sb_sch');
                 fprintf('\n');
                 
+                self.schd = sb_sch;
+                
                 % Iterate over all users
                 for user_iter = 1:length(self.user_list)
                     % Sends list of assigned channels
@@ -63,6 +91,9 @@ classdef base_station < handle
         end
         
         function modu = modulation(self)
+            % Please note Modulation only returns the modulation for each
+            % user. However, it does NOT return the modulation for each
+            % subcarrier.
             if (~isempty(self.user_list))
                 % Calculate modulation with highest spectral efficiency
                 % store spectral efficiency in spec_eff
@@ -112,6 +143,8 @@ classdef base_station < handle
                 fprintf('Modulation: ');
                 fprintf('%i ', modu);
                 fprintf('\n');
+                
+                self.modu = modu;
             end
         end
         
