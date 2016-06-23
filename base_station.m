@@ -76,6 +76,7 @@ classdef base_station < handle
 
                     % Modulation #1 = QPSK
                     if (f.CQI > 6)
+                        % + spec_eff offset ???
                         spec_eff(1) = spec_eff(1) + self.get_efficiency(6);
                     else
                         spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI);
@@ -103,13 +104,13 @@ classdef base_station < handle
                         spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI);
                     end
 
-                    % Choose Modulation with highest bit/s:
-                    [~,modu(user_iter)] = max(spec_eff);
+                    % Choose Modulation with highest bit/s
+                    [~,Index] = max(spec_eff);
+                    modu(user_iter) = Index;
                 end
-
                 % Return Modulation
                 fprintf('Modulation: ');
-                fprintf('%i ', modu');
+                fprintf('%i ', modu);
                 fprintf('\n');
             end
         end
