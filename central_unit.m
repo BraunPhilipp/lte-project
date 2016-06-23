@@ -113,19 +113,30 @@ classdef central_unit < handle
             map = zeros(length(self.user_list),1);
             base_ranking = self.ranking();
             conf = self.conflict_list();
+            ignore = [];
             for user_iter = 1:length(self.user_list)
                 % Determine if a conflict exists for a specific user (user_iter)
                 self.user_list(user_iter).conflict = 0;
                 if (sum(conf(user_iter,:)) > 0)
-                    self.user_list(user_iter).conflict = 1;
-                    sel_user = 0;
-                    Index = 0;
-                    while sel_user == 0
-                        % Triangular random Selection prevents doubling
-                        Index = randi(length(conf(user_iter,:)));
-                        sel_user = conf(user_iter, Index); 
+                    % check which user conflicts have been solved
+                    found = sum(ismember(ignore, user_iter));
+                    if (found == 0)
+                        self.user_list(user_iter).conflict = 1;
+                        sel_user = 0;
+                        Index = 0;
+                        while sel_user == 0
+                            % Random Selection prevents doubling
+                            Index = randi(length(conf(user_iter,:)));
+                            sel_user = conf(user_iter, Index); 
+                        end
+                        % ignore unmapped users
+                        for user_iter2 = 1:length(self.user_list)
+                            if conf(user_iter, user_iter2) > 0
+                                ignore = [ignore user_iter2];
+                            end
+                        end
+                        map(user_iter) = base_ranking(Index,1);
                     end
-                    map(user_iter) = base_ranking(Index,1);
                 else
                     % Usual Matching
                     map(user_iter) = base_ranking(user_iter,1);
@@ -135,7 +146,9 @@ classdef central_unit < handle
             
             self.user_map = cell(length(self.base_list),1);
             for map_iter = 1:length(map)
-                self.user_map{map(map_iter)} = [self.user_map{map(map_iter)}, map_iter];
+                if map(map_iter) > 0
+                    self.user_map{map(map_iter)} = [self.user_map{map(map_iter)}, map_iter];
+                end
             end
             
             self.map_to_basestation();
