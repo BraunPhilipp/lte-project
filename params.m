@@ -7,6 +7,10 @@ properties (Constant)
     
     user_distance = 80;
     
+    N_RB = 1;
+    RB_spacing = 1;
+    bhaul = 100000; % 100 Mbit/s
+    
     n_u_antennas = [1, 1, 4, 8];
     n_b_antennas = [1, 4, 1, 8];
     n_feed_subcarriers = [25, 32, 32, 32];

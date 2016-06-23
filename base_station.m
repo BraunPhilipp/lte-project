@@ -17,6 +17,12 @@ classdef base_station < handle
         schd;
         modu;
         beam;
+        steer;
+        
+        c_max;
+        tbs_max;
+        
+        bhaul;
     end
    
     methods
@@ -39,6 +45,11 @@ classdef base_station < handle
             obj.schd = [];
             obj.modu = [];
             obj.beam = [];
+            obj.steer = [];
+            
+            obj.c_max = [];
+            obj.tbs_max = [];
+            obj.bhaul = params.bhaul;
         end
         
         function beam = beamforming(self)
@@ -48,6 +59,11 @@ classdef base_station < handle
                     % count previous occurences
                     num_occ = sum(self.schd(schd_iter) == self.schd(1:schd_iter)) - 1;
                     schd(schd_iter) = num_occ;
+                    % calculate antenna offset
+                    theta = atan(num_occ / helpers.distance(self.user_list( ...
+                                    self.schd(schd_iter)).pos, self.pos));
+                    % steering vector            
+                    self.steer = exp(-schd*i*theta);
                 end
                 % Output Phaseshift
                 fprintf('Phase Shift: ');
@@ -135,9 +151,14 @@ classdef base_station < handle
                         spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI);
                     end
 
-                    % Choose Modulation with highest bit/s
+                    % Choose Modulation with highest bit/ms
                     [~,Index] = max(spec_eff);
                     modu(user_iter) = Index;
+                    % Maximum channel capacity
+                    self.c_max(user_iter) = spec_eff(Index);
+                    % Transfer block size per ms
+                    self.tbs_max(user_iter) = self.c_max(user_iter) * ...
+                                                    (params.N_RB * params.RB_spacing); 
                 end
                 % Return Modulation
                 fprintf('Modulation: ');
