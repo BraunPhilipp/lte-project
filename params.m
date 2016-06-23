@@ -7,8 +7,7 @@ properties (Constant)
     
     user_distance = 80;
     
-    N_RB = 1;
-    RB_spacing = 1;
+    RB_spacing = 180000; % 180kHz
     bhaul = 100000; % 100 Mbit/s
     
     n_u_antennas = [1, 1, 4, 8];

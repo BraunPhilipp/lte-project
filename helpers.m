@@ -24,7 +24,7 @@ function s = sinr(user, base, sel)
        interference = interference + helpers.friis(user, base(i));
     end
     interference = interference - helpers.friis(user, base(sel));
-    s = helpers.friis(user, base(sel)) / (interference + user.noise);
+    s = helpers.friis(user, base(sel)) - (interference + user.noise);
 end
     
 end

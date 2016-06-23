@@ -115,7 +115,9 @@ classdef base_station < handle
                 % store spectral efficiency in spec_eff
                 modu = zeros(length(self.user_list),1);
 
-                for user_iter = 1:length(self.user_list)
+                for user_iter = 1:length(self.user_list) 
+                    % Count Resource Blocks
+                    num_rb = sum(user_iter == self.schd);
                     % Initialize Spectral Efficiency
                     spec_eff = zeros(3,1);
                     % Get a feedback from a user
@@ -150,15 +152,22 @@ classdef base_station < handle
                     else
                         spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI);
                     end
-
+                    % Iterate through spectral efficiency
+                    for i = 1:length(spec_eff)
+                        num_rb = sum(spec_eff >= spec_eff(i));
+                        cmp = spec_eff(i) * (num_rb * params.RB_spacing) / 1000;
+                        RI = min(RI(spec_eff >= spec_eff(i)));
+                        TBS_ = TBS(RI, num_rb, :);
+                        MCS = find(cmp<=TBS_);
+                    end
                     % Choose Modulation with highest bit/ms
-                    [~,Index] = max(spec_eff);
+                    [~,Index] = max(spec_eff); % 0.15
                     modu(user_iter) = Index;
                     % Maximum channel capacity
                     self.c_max(user_iter) = spec_eff(Index);
                     % Transfer block size per ms
                     self.tbs_max(user_iter) = self.c_max(user_iter) * ...
-                                                    (params.N_RB * params.RB_spacing); 
+                                                    (num_rb * params.RB_spacing); 
                 end
                 % Return Modulation
                 fprintf('Modulation: ');
@@ -166,6 +175,9 @@ classdef base_station < handle
                 fprintf('\n');
                 
                 self.modu = modu;
+                % Backhaul Output
+                self.bhaul = sum(self.tbs_max);
+                fprintf('Backhaul: %f\n', self.bhaul);
             end
         end
         
