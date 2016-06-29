@@ -8,6 +8,42 @@ function dist = distance(pos1, pos2)
     dist = sqrt(sum((pos1-pos2).^2));
 end
 
+function n_of_bs = calc_n_of_bs()
+    % calculate how many bs fit in a space of given size in hexagonal order
+    % we calculate with hexagons of edge lenth 80
+    n_of_bs = fix(params.space_size/138.5641)*fix(params.space_size/120);
+end
+
+function coordinates = calc_coordinates()
+    coordinates = [];
+    % values of hexagon:
+    edge_length = params.edge_length;
+    a=sin(pi/3)*edge_length;
+    b=cos(pi/3)*edge_length;
+    c=edge_length;
+    hex = [];
+    row =1;
+    % initialize first hexagon:
+    hex = [a,b+c/2];
+    
+    while (hex(2)<=params.space_size )
+        % give hex its start value
+        if mod(row,2)==1
+            hex(1)=a;
+        else
+            hex(1)=2*a;
+        end
+        % add points to coordinats until end of space
+        while (hex(1)<=params.space_size )
+            coordinates = [coordinates; hex];
+            hex(1) = hex(1) + 2*a;
+        end
+        % add 1 to row counter
+        row = row +1;
+        hex(2)= hex(2)+c+b;
+    end
+end
+
 function fr = friis(user, base)
     % Returns Received Power using friis equation
     lambda = 300000000 / base.frq;

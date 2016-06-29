@@ -76,7 +76,7 @@ classdef base_station < handle
         
         function sch = scheduling(self)
             fprintf('> Basestation: %i\n', self.id);
-            % Coordinates scheduling activities (mere RoundRobin so fardd)
+            % Coordinates scheduling activities (mere RoundRobin so far)
             if (~isempty(self.user_list))
                 % Generate empty Signals for all users
                 sch = zeros(length(self.user_list), self.subcarr_num);
@@ -106,7 +106,7 @@ classdef base_station < handle
             end
         end
         
-        function modu = modulation(self)
+        function modu = modulation(self,TBS)
             % Please note Modulation only returns the modulation for each
             % user. However, it does NOT return the modulation for each
             % subcarrier.
@@ -114,8 +114,36 @@ classdef base_station < handle
                 % Calculate modulation with highest spectral efficiency
                 % store spectral efficiency in spec_eff
                 modu = zeros(length(self.user_list),1);
-
-                for user_iter = 1:length(self.user_list) 
+                % do modulation for all users
+                for user_iter = 1:length(self.user_list)                  
+                    % generate list of subcs assigned to user. subcarriers
+                    % holds the information which subcarriers_ue are assigned
+                    % to the given user
+                    index_counter = 1; 
+                    subcarriers_ue = zeros(sum(self.user_list(user_iter).signaling));
+                    for subc_iter = 1:self.subcarr_num
+                        if self.user_list(user_iter).signaling(subc_iter)==1
+                            subcarriers_ue(index_counter)=subc_iter;
+                            index_counter = index_counter +1;
+                        end
+                    end                   
+                    % generate feedback of user
+                    f = self.user_list(user_iter).feedback(self);
+                    % calculate best MCS
+                    % iterate over all subcarriers of the user
+                    for subc = 1:length(subcarriers_ue)
+                        % check out the subcarrier's cqi
+                        cqi_ue = f.CQI(subcarrier_ue(subc));
+                        % count how many others subcarrier's have at least
+                        % the same cqi. n_rb is the number of recource
+                        % blocks considered in TBS
+                        n_rb = sum(f.CQI(1,subcarrier_ue)>=cqi_ue); 
+                        n_layers = min(f.RI(1,subcarrier_ue));
+                        TBS_max = self.get_efficiency(cqi_ue)*0.001*n_rb...
+                            *180000;
+                    end
+                    
+                    
                     % Count Resource Blocks
                     num_rb = sum(user_iter == self.schd);
                     % Initialize Spectral Efficiency

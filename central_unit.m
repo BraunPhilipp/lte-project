@@ -119,6 +119,7 @@ classdef central_unit < handle
                 self.user_list(user_iter).conflict = 0;
                 if (sum(conf(user_iter,:)) > 0)
                     % check which user conflicts have been solved
+                    % check which user_iter is supposed to be ignored
                     found = sum(ismember(ignore, user_iter));
                     if (found == 0)
                         self.user_list(user_iter).conflict = 1;

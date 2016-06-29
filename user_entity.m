@@ -29,8 +29,8 @@ classdef user_entity < handle
             end
             
             % Generate random Feedback
-            feed.CQI = randi([1,15]);
-            feed.RI = randi(max,base.subcarr_num,1);
+            feed.CQI = randi(15,1,25); % one cqi for every subcarrier
+            feed.RI = randi(max,1,base.subcarr_num);
             feed.PMI = randi(10);
         end
       

@@ -4,9 +4,10 @@ properties (Constant)
     
     num_basestations = 4;
     num_users = 16;
-    
+    space_size = 400;
     user_distance = 80;
-    
+    edge_length = 80;
+    num_subcarrier = 25;
     RB_spacing = 180000; % 180kHz
     bhaul = 100000; % 100 Mbit/s
     
