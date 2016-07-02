@@ -62,7 +62,7 @@ classdef central_unit < handle
             % Possible Optimization Problem & Fallback Basestations
             
             % Return only best SINR basestations
-            ranking = sinr_ranking(:,1);
+            ranking = sinr_ranking(:,[1,2]);
         end
         
         function conf_matr = conflict_list(self)
@@ -80,8 +80,9 @@ classdef central_unit < handle
                 for user_iter2 = 1:length(self.user_list)
                     if (user_iter1 ~= user_iter2 && helpers.distance(self.user_list(user_iter1).pos, ...
                                                 self.user_list(user_iter2).pos) < params.user_distance)
-                        % Same station prefered ?
-                        if (snr_eval(user_iter1) == snr_eval(user_iter2,1))
+                        % Same stations prefered ?
+                        if ( sum(ismember(snr_eval(user_iter1,[1,2]),...
+                                snr_eval(user_iter2,[1,2])))>1)
                             % Add Conflicting User to Matrix
                             conf_matr(user_iter1, user_iter2) = 1;
                             % Check if user1 already in conflict list
@@ -106,41 +107,57 @@ classdef central_unit < handle
             % map(4)=3 means that user 4 is mapped to basestation 3.
             % continuously mutes signals of all other basestations
             
+            % initialize map propert
+            for user_iter = 1:length(self.user_list)
+                self.user_list(user_iter).mapped = 0;
+            end
             % Clear Lists for Simulation
             self.base_map = [];
             self.user_map = [];
             
             map = zeros(length(self.user_list),1);
+            % Get the ranking: BS with highest SNR
             base_ranking = self.ranking();
+            % Get list of conflicting users
             conf = self.conflict_list();
             ignore = [];
             for user_iter = 1:length(self.user_list)
                 % Determine if a conflict exists for a specific user (user_iter)
-                self.user_list(user_iter).conflict = 0;
                 if (sum(conf(user_iter,:)) > 0)
                     % check which user conflicts have been solved
                     % check which user_iter is supposed to be ignored
                     found = sum(ismember(ignore, user_iter));
                     if (found == 0)
-                        self.user_list(user_iter).conflict = 1;
-                        sel_user = 0;
+                        selected_user_conf = 0;
+                        selected_user = 0;
                         Index = 0;
-                        while sel_user == 0
-                            % Random Selection prevents doubling
-                            Index = randi(length(conf(user_iter,:)));
-                            sel_user = conf(user_iter, Index); 
+                        % Random Selection of a user from the group of
+                        % conflicting users
+                        while selected_user_conf == 0 ...
+                                && selected_user ~= user_iter
+                            selected_user = randi(length(conf(user_iter,:)));
+                            selected_user_conf = conf(user_iter, selected_user);                             
                         end
-                        % Ignore unmapped users
+                        % Ignore conflicting users so they wont get
+                        % considered in the mapping precess anymore
                         for user_iter2 = 1:length(self.user_list)
-                            if conf(user_iter, user_iter2) > 0
+                            if conf(user_iter, user_iter2) > 0 
                                 ignore = [ignore user_iter2];
                             end
                         end
-                        map(user_iter) = base_ranking(Index,1);
+                        % Ignore user_iter if it is not mapped
+                        if selected_user ~= user_iter
+                            ignore = [ignore user_iter];
+                        end
+                        map(selected_user) = base_ranking(selected_user,1);
+                        % save that user was mapped so we can find the
+                        % unmapped easily later on
+                        self.user_list(selected_user).mapped = 1;
                     end
                 else
                     % Usual Matching
                     map(user_iter) = base_ranking(user_iter,1);
+                    self.user_list(user_iter).mapped = 1;
                 end
             end
             self.base_map = map;
@@ -187,6 +204,51 @@ classdef central_unit < handle
             % Pass User Entities to Basestation
             for base_iter = 1:length(self.base_list)
                 self.base_list(base_iter).user_list = self.user_list(self.user_map{base_iter});
+            end
+        end
+        
+        function draw(self,step)
+            % draw all base stations and all users that are mapped to that 
+            % base stations
+            % Get list of conflicts:
+            figure(step);
+            conf = self.conflict_list();
+            for base_iter = 1:length(self.base_list)
+                for user_iter = 1:length(self.base_list(base_iter).user_list)   
+                    x = self.base_list(base_iter).user_list(user_iter).pos(1);
+                    y = self.base_list(base_iter).user_list(user_iter).pos(2);
+                    if sum(conf(self.base_list(base_iter).user_list(user_iter).id,:))>0
+                        plot(x,y,'-xm');
+                        hold on;
+                    else
+                        plot(x,y,'-or');
+                        hold on;
+                    end
+                    labels = cellstr(num2str(base_iter));
+                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+                end
+                x = self.base_list(base_iter).pos(1);
+                y = self.base_list(base_iter).pos(2);
+                plot(x,y,'-ob');
+                labels = cellstr(num2str(base_iter));
+                text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+                hold on;
+            end
+            % Draw all unmapped users:
+            for user_iter = 1:length(self.user_list)
+                if self.user_list(user_iter).mapped ==0
+                    x = self.user_list(user_iter).pos(1);
+                    y = self.user_list(user_iter).pos(2);
+                    if sum(conf(self.user_list(user_iter).id,:))>0
+                        plot(x,y,'-xm');
+                        hold on;
+                    else
+                        plot(x,y,'-or');
+                        hold on;
+                    end
+                    labels = cellstr(num2str(0));
+                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');                    
+                end
             end
         end
 

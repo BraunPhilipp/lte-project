@@ -6,7 +6,7 @@ classdef user_entity < handle
         ch;
         signaling;
         antenna_num;
-        conflict = 0;          %signals whether user is in a conflict
+        mapped ;          %signals whether user is mapped
     end
    
     methods
@@ -18,6 +18,7 @@ classdef user_entity < handle
             obj.ch = channel();
             obj.signaling = [];
             obj.antenna_num = antn_attr;
+            obj.mapped =0;
         end
         
         function feed = feedback(self, base)

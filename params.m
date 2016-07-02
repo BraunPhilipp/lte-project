@@ -2,14 +2,15 @@ classdef params
     
 properties (Constant)
     
-    num_basestations = 4;
-    num_users = 16;
-    space_size = 400;
-    user_distance = 80;
-    edge_length = 80;
-    num_subcarrier = 25;
-    RB_spacing = 180000; % 180kHz
-    bhaul = 100000; % 100 Mbit/s
+    
+    num_users = 50;         % numer of users
+    space_size = 700;       % size of simulation space
+    user_distance = 40;     % max. distance between conflicting users
+    edge_length = 120;      % edge lenth of a hexagon around a basestation
+    num_subcarrier = 25;    % 25 Subcarrier
+    RB_spacing = 180000;    % 180kHz
+    timestep = 0.001;       % 1ms
+    bhaul = 100000;         % 100 Mbit/s
     
     n_u_antennas = [1, 1, 4, 8];
     n_b_antennas = [1, 4, 1, 8];

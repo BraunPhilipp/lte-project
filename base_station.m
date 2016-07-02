@@ -82,11 +82,11 @@ classdef base_station < handle
                 sch = zeros(length(self.user_list), self.subcarr_num);
                 sb_sch = zeros(self.subcarr_num,1); % used to display round robin
                 % Iterates over all subcarriers
-                for subc = 0:(self.subcarr_num-1)
+                for subc = 1:(self.subcarr_num)
                     % MOD(#Endusers)-th user gets the subcarrier assigned
-                    n_user = mod(subc,length(self.user_list))+1;
-                    sch(n_user,subc+1) = 1;
-                    sb_sch(subc+1) = n_user;
+                    n_user = mod(subc-1,length(self.user_list))+1;
+                    sch(n_user,subc) = 1;
+                    sb_sch(subc) = n_user;
                 end
                 
                 % Output Scheduling
@@ -98,7 +98,7 @@ classdef base_station < handle
                 
                 % Iterate over all users
                 for user_iter = 1:length(self.user_list)
-                    % Sends list of assigned channels
+                    % Sends list of assigned channels to users
                     self.user_list(user_iter).signaling = sch(user_iter,:);
                 end
             else
@@ -114,88 +114,47 @@ classdef base_station < handle
                 % Calculate modulation with highest spectral efficiency
                 % store spectral efficiency in spec_eff
                 modu = zeros(length(self.user_list),1);
+                TBS_values = zeros(1,length(self.user_list));
                 % do modulation for all users
                 for user_iter = 1:length(self.user_list)                  
-                    % generate list of subcs assigned to user. subcarriers
-                    % holds the information which subcarriers_ue are assigned
-                    % to the given user
+                    % generate list of subcs assigned to user.
+                    % subcarriers_ue holds the information which 
+                    % subcarriers are assigned to the given user
                     index_counter = 1; 
-                    subcarriers_ue = zeros(sum(self.user_list(user_iter).signaling));
+                    subcarriers_ue = zeros(1,sum(self.user_list(user_iter).signaling));
                     for subc_iter = 1:self.subcarr_num
                         if self.user_list(user_iter).signaling(subc_iter)==1
                             subcarriers_ue(index_counter)=subc_iter;
                             index_counter = index_counter +1;
                         end
-                    end                   
+                    end 
                     % generate feedback of user
                     f = self.user_list(user_iter).feedback(self);
                     % calculate best MCS
                     % iterate over all subcarriers of the user
+                    % save the varioues MCS values in a vector
+                    MCS_values = zeros(1,length(subcarriers_ue));
+                    % save the varioues TBS values in a vector
+                    TBS_values_ue = zeros(1,length(subcarriers_ue));
                     for subc = 1:length(subcarriers_ue)
                         % check out the subcarrier's cqi
-                        cqi_ue = f.CQI(subcarrier_ue(subc));
+                        cqi_ue = f.CQI(subcarriers_ue(subc));
                         % count how many others subcarrier's have at least
                         % the same cqi. n_rb is the number of recource
                         % blocks considered in TBS
-                        n_rb = sum(f.CQI(1,subcarrier_ue)>=cqi_ue); 
-                        n_layers = min(f.RI(1,subcarrier_ue));
-                        TBS_max = self.get_efficiency(cqi_ue)*0.001*n_rb...
-                            *180000;
+                        n_rb = sum(f.CQI(1,subcarriers_ue)>=cqi_ue); 
+                        n_layers = min(f.RI(1,subcarriers_ue));
+                        % Calculate maximal TBS
+                        TBS_max = self.get_efficiency(cqi_ue)*...
+                            params.timestep*n_rb*params.RB_spacing;
+                        % Get biggest MCS and TBS possible
+                        [TBS_values_ue(subc),MCS_values(subc)] = max(TBS...
+                            (:,n_rb,n_layers).*(TBS(:,n_rb,n_layers)<=TBS_max));
                     end
+                    % save highest MCS and TBS value for given user
+                    modu(user_iter) = max(MCS_values);
+                    TBS_values(user_iter) = max(TBS_values_ue);
                     
-                    
-                    % Count Resource Blocks
-                    num_rb = sum(user_iter == self.schd);
-                    % Initialize Spectral Efficiency
-                    spec_eff = zeros(3,1);
-                    % Get a feedback from a user
-                    f = self.user_list(user_iter).feedback(self);
-
-                    % Modulation #1 = QPSK
-                    if (f.CQI > 6)
-                        % + spec_eff offset ???
-                        spec_eff(1) = spec_eff(1) + self.get_efficiency(6);
-                    else
-                        spec_eff(1) = spec_eff(1) + self.get_efficiency(f.CQI);
-                    end
-
-                    % bottleneck = smallest CQI value -> should be transmitted
-                    % spectral efficiency = smallest efficiency
-                    % data rate = spectral efficiency * df(subcarrier) * number
-                    % of subcarriers
-                    % packet = data rate * time (1 ms)
-
-                    % Modulation #2 = 16QAM
-                    if (f.CQI > 9)
-                        spec_eff(2) = spec_eff(2) + self.get_efficiency(9);
-                    elseif f.CQI < 7
-                        % CQI too low for given modulation
-                    else
-                        spec_eff(2) = spec_eff(2) + self.get_efficiency(f.CQI);
-                    end
-
-                    % Modulation #3 = 64QAM
-                    if (f.CQI < 10)
-                        % CQI too low for given modulation
-                    else
-                        spec_eff(3) = spec_eff(3) + self.get_efficiency(f.CQI);
-                    end
-                    % Iterate through spectral efficiency
-                    for i = 1:length(spec_eff)
-                        num_rb = sum(spec_eff >= spec_eff(i));
-                        cmp = spec_eff(i) * (num_rb * params.RB_spacing) / 1000;
-                        RI = min(RI(spec_eff >= spec_eff(i)));
-                        TBS_ = TBS(RI, num_rb, :);
-                        MCS = find(cmp<=TBS_);
-                    end
-                    % Choose Modulation with highest bit/ms
-                    [~,Index] = max(spec_eff); % 0.15
-                    modu(user_iter) = Index;
-                    % Maximum channel capacity
-                    self.c_max(user_iter) = spec_eff(Index);
-                    % Transfer block size per ms
-                    self.tbs_max(user_iter) = self.c_max(user_iter) * ...
-                                                    (num_rb * params.RB_spacing); 
                 end
                 % Return Modulation
                 fprintf('Modulation: ');
@@ -204,7 +163,7 @@ classdef base_station < handle
                 
                 self.modu = modu;
                 % Backhaul Output
-                self.bhaul = sum(self.tbs_max);
+                self.bhaul = sum(TBS_values);
                 fprintf('Backhaul: %f\n', self.bhaul);
             end
         end
