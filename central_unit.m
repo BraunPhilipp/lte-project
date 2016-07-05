@@ -154,6 +154,8 @@ classdef central_unit < handle
             self.base_map = map;
             
             self.user_map = cell(length(self.base_list),1);
+            % user_map saves (in e.g. cell 3) which users are mapped to a
+            % basestation (for example user_map(3)=[1,7,46])
             for map_iter = 1:length(map)
                 if map(map_iter) > 0
                     self.user_map{map(map_iter)} = [self.user_map{map(map_iter)}, map_iter];
@@ -166,7 +168,8 @@ classdef central_unit < handle
             map;
         end
         
-        function map_users_dp(self)
+        function map_users_dps(self)
+            % Dynamic Point Selection
             % map defines to which basestation a user is mapped. For Example 
             % map(4)=3 means that user 4 is mapped to basestation 3.
             % continuously mutes signals of all other basestations
@@ -176,9 +179,41 @@ classdef central_unit < handle
             % Clear Lists for Simulation
             self.base_map = [];
             self.user_map = [];
-            
+            % initialize map
             map = zeros(length(self.user_list),1);
-            map = self.ranking();
+            % Get the ranking: BS with first and second highest SNR (n_users X 2)
+            base_ranking = self.ranking();
+            % Get matrix (n_users X n_users) of conflicting users
+            [conf_matrix,conf_cell] = self.conflict_list();
+            for user_iter = 1:length(self.user_list)
+                if sum(conf_matrix(user_iter,:)) > 0
+                    % check if user is already mapped
+                    if map(user_iter)==0
+                        % get group of conflicting users:
+                        conf_group = [user_iter conf_cell{user_iter}];
+                        % check if no member of conf_group is already mapped
+                        if sum(map(conf_group))==0
+                            % get list of possible basestations:
+                            poss_bs = base_ranking(conf_group,1);
+                            % select one randomly
+                            selected_bs_index = randi(length(poss_bs));
+                            % assign all users to that basestation:
+                            map(conf_group)=poss_bs(selected_bs_index);
+                        % check if one user of conf_group is already mapped
+                        elseif sum(map(conf_group)>0)<2
+                            for conf_group_iter = 1:length(conf_group)
+                            end
+                        end
+                    end                    
+                else
+                    % usual mapping:
+                    map(user_iter)= base_ranking(user_iter,1);
+                end
+            end
+            
+            
+            
+%             map = self.ranking();
             self.base_map = map;
             
             self.user_map = cell(length(self.base_list),1);

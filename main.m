@@ -1,6 +1,8 @@
 % TODOS:
-% 1)für die user_entities eigene draw funktions schreiben. cu. draw is noch
+% 1)für die user_entities eigene draw funktions schreiben. cu.draw is noch
 % relativ hässlich
+% 2) DPS is zu 90% fertig aber erste version läuft
+% 3) Backhaul calculation bei dps
 
 clear
 clf
@@ -37,11 +39,11 @@ TBS_obj = TBS('TBS.xls');
 % end
 
 % Simulate Transmission
-for delta = 1:5
+for delta = 1:6
     %cu.map_users_dp();
     display('timestep');
     display(delta);
-    cu.map_users_cs();
+    cu.map_users_dps();
     for i = 1:length(bs)
         cu.base_list(i).scheduling();
         cu.base_list(i).modulation(TBS_obj.TBs);
