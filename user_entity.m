@@ -5,8 +5,7 @@ classdef user_entity < handle
         noise;
         ch;
         signaling;
-        antenna_num;
-        mapped ;          %signals whether user is mapped
+        antenna_num; 
     end
    
     methods
@@ -18,7 +17,6 @@ classdef user_entity < handle
             obj.ch = channel();
             obj.signaling = [];
             obj.antenna_num = antn_attr;
-            obj.mapped =0;
         end
         
         function feed = feedback(self, base)

@@ -65,13 +65,14 @@ classdef central_unit < handle
             ranking = sinr_ranking(:,[1,2]);
         end
         
-        function conf_matr = conflict_list(self)
+        function [conf_matr,conf_cell_user] = conflict_list(self)
             % Find conflicting users on Cell Edges
             % ------------------------------------------------------------
             % Conflict List returns a Matrix of conflicting user entities
             % as well as a matrix. Enabling easier access lateron.
             
             conf_cell = cell(length(self.base_list),1);
+            conf_cell_user = cell(length(self.user_list),1);
             conf_matr = zeros(length(self.user_list));
             % Calculate Ranking Score
             snr_eval = self.ranking();
@@ -83,8 +84,9 @@ classdef central_unit < handle
                         % Same stations prefered ?
                         if ( sum(ismember(snr_eval(user_iter1,[1,2]),...
                                 snr_eval(user_iter2,[1,2])))>1)
-                            % Add Conflicting User to Matrix
+                            % Add Conflicting User to Matrix and Cell
                             conf_matr(user_iter1, user_iter2) = 1;
+                            conf_cell_user{user_iter1} = [conf_cell_user{user_iter1} user_iter2];
                             % Check if user1 already in conflict list
                             if ( ~ismember(user_iter1, conf_cell{snr_eval(user_iter1),1}) )
                             	conf_cell{snr_eval(user_iter1),1} = [ conf_cell{snr_eval(user_iter1),1}, user_iter1 ];
@@ -107,57 +109,46 @@ classdef central_unit < handle
             % map(4)=3 means that user 4 is mapped to basestation 3.
             % continuously mutes signals of all other basestations
             
-            % initialize map propert
-            for user_iter = 1:length(self.user_list)
-                self.user_list(user_iter).mapped = 0;
-            end
             % Clear Lists for Simulation
             self.base_map = [];
             self.user_map = [];
             
             map = zeros(length(self.user_list),1);
-            % Get the ranking: BS with highest SNR
+            % Get the ranking: BS with first and second highest SNR (n_users X 2)
             base_ranking = self.ranking();
-            % Get list of conflicting users
-            conf = self.conflict_list();
+            % Get matrix (n_users X n_users) of conflicting users
+            [conf_matrix,conf_cell] = self.conflict_list();
+            % List of users to be ignored in this mapping process
             ignore = [];
             for user_iter = 1:length(self.user_list)
                 % Determine if a conflict exists for a specific user (user_iter)
-                if (sum(conf(user_iter,:)) > 0)
-                    % check which user conflicts have been solved
-                    % check which user_iter is supposed to be ignored
+                if (sum(conf_matrix(user_iter,:)) > 0)
+                    % check if user_iter is supposed to be ignored
                     found = sum(ismember(ignore, user_iter));
                     if (found == 0)
-                        selected_user_conf = 0;
-                        selected_user = 0;
-                        Index = 0;
-                        % Random Selection of a user from the group of
-                        % conflicting users
-                        while selected_user_conf == 0 ...
-                                && selected_user ~= user_iter
-                            selected_user = randi(length(conf(user_iter,:)));
-                            selected_user_conf = conf(user_iter, selected_user);                             
-                        end
-                        % Ignore conflicting users so they wont get
-                        % considered in the mapping precess anymore
-                        for user_iter2 = 1:length(self.user_list)
-                            if conf(user_iter, user_iter2) > 0 
-                                ignore = [ignore user_iter2];
+                        % get group of conflicting_users:
+                        conf_users = [user_iter conf_cell{user_iter}];
+                        % calculate which users are still allowed to be
+                        % mapped
+                        allowed_to_be_mapped = [];
+                        % been mapped:
+                        for conf_users_iter = 1:length(conf_users)
+                            if sum(map(conf_cell{conf_users(conf_users_iter)})) ==0
+                                allowed_to_be_mapped = [allowed_to_be_mapped conf_users(conf_users_iter)];
                             end
                         end
-                        % Ignore user_iter if it is not mapped
-                        if selected_user ~= user_iter
-                            ignore = [ignore user_iter];
-                        end
-                        map(selected_user) = base_ranking(selected_user,1);
-                        % save that user was mapped so we can find the
-                        % unmapped easily later on
-                        self.user_list(selected_user).mapped = 1;
+                        % map random users from the allowed_to_be_mapped list
+                        selected_user_index = randi(length(allowed_to_be_mapped));
+                        map(allowed_to_be_mapped(selected_user_index)) = ...
+                            base_ranking(allowed_to_be_mapped(selected_user_index),1);
+                        % Ignore conflicting users so they wont get
+                        % considered in the mapping precess anymore
+                        ignore =[ignore conf_users];
                     end
+                    % user is to be ignored and is not mapped
                 else
                     % Usual Matching
                     map(user_iter) = base_ranking(user_iter,1);
-                    self.user_list(user_iter).mapped = 1;
                 end
             end
             self.base_map = map;
@@ -212,7 +203,7 @@ classdef central_unit < handle
             % base stations
             % Get list of conflicts:
             figure(step);
-            conf = self.conflict_list();
+            [conf,~] = self.conflict_list();
             for base_iter = 1:length(self.base_list)
                 for user_iter = 1:length(self.base_list(base_iter).user_list)   
                     x = self.base_list(base_iter).user_list(user_iter).pos(1);
@@ -236,7 +227,7 @@ classdef central_unit < handle
             end
             % Draw all unmapped users:
             for user_iter = 1:length(self.user_list)
-                if self.user_list(user_iter).mapped ==0
+                if self.base_map(user_iter) ==0
                     x = self.user_list(user_iter).pos(1);
                     y = self.user_list(user_iter).pos(2);
                     if sum(conf(self.user_list(user_iter).id,:))>0
