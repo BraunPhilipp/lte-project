@@ -38,7 +38,7 @@
 				\begin{itemize}
 					\item Introduction
 					\item Background
-					\item System Mode
+					\item System Model
 					\item Simulation
 					\item Evaluations
 					\item Conclusions
@@ -77,9 +77,142 @@
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item 4G LTE Advanced CoMP, coordinated multipoint is used to send and receive data to and from a UE from several points to ensure the optimum performance is achieved even at cell edges
-					\item The aim is to improve overall quality for the user as well as improving the utilization of the network 
-					\item CoMP has not been included int LTE Rel. 10, it is still in deployment
+					\item CoMP: optimizing performance by sending and receiving data to and from User Entities from several points
+					\item Especially important on cell edges
+					\item aim: improving quality for user, optimum capacity of network 
+					\item CoMP still in development (not included in LTE Rel. 10)
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+% Background Slide
+% Research topics and papers
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Background}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item papers on LTE-A, Joint Transmission, Beamforming and CoMP in general
+					\item reference: MATLAB-based down-
+link physical-layer simulator for LTE (Mehlführer, C., 2009)
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+% System Modek Slide
+% ???
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{System Model}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item classes providing main functionality: central unit, base station, user entity, channel
+					\item classes providing background data: TBS, helpers, params, precoding matrix
+					\item XXX add graph of class hierarchy
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+ 
+ 
+ % Details on our Classes
+  \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{System Model - Classes providing main functionality}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item central unit: coordinates all base stations (one per simulation)
+					\item base station: matches subcarriers to connected users, calculates modulation
+					\item user entity: returns feedback to the base station (at the moment: randomly generated)
+					\item channel: has a certain frequency and amount of subcarriers, model: Rayleigh channel (XXX add graph of Rayleigh Channel)
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+
+% Simulation Slide
+% What is it able to do?
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Simulation}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item TODO add graphs: conflicting users, mapping users to base stations
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+ 
+% Evaluations Slide
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Evaluation}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item Simulation with and without CoMP
+					\item Why should you use comp?
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+ 
+ % Slide on why to use CoMP
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Advantages}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item cell edges
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+	 \begin{block}{Disadvantages}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item computational power and time loss
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+% Conclusions Slide
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Conclusion}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item main functionality for a LTE-A simulator implemented
+					\item finding: CoMP can be helpful in a lot of cases --> individual test on necessarity
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+% References Slide
+% Papers etc.
+
+ \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{References}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item Mehlführer, C. et al, 2009. Simulating The Long Term Evolution Physical Layer. Proc. 17th European Signal Processing Conference (EUSIPCO 2009), [online]
+					\item Davydov, A. et al, 2013. Evaluation of Joint Transmission CoMP in C-RAN based LTE-A HetNets with Large Coordination Areas. Globecom 2013 Workshop.
+					\item Hong, M. et al, 2012. Joint Base Station Clustering and Beamformer Design for Partial Coordinated Transmission in Heterogeneous Networks.
+					\item Sawahashi, M. et al, 2010. Coordinated Multipoint Transmission/Reception Techniques For LTE-Advanced.
 				\end{itemize}
 			\end{column}
 		\end{columns}
