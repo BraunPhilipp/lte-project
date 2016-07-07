@@ -1,7 +1,7 @@
 % TODOS:
-% 1)f¸r die user_entities eigene draw funktions schreiben. cu.draw is noch
-% relativ h‰sslich
-% 2) DPS is zu 90% fertig aber erste version l‰uft
+% 1)f√ºr die user_entities eigene draw funktions schreiben. cu.draw is noch
+% relativ h√§sslich
+% 2) DPS is zu 90% fertig aber erste version l√§uft
 % 3) Backhaul calculation bei dps
 
 clear
@@ -51,4 +51,3 @@ for delta = 1:6
     end
     cu.draw(delta);
 end
-
