@@ -7,7 +7,7 @@
 
 \title{4G LTE CoMP, Coordinated Multipoint}
 \subtitle{4th Semester Institute Project}
-\author[Matthis Dirksen]{\tiny Leonhard Hertz \and Philipp Braun \and Carmine Bianco \and Alissa Wenzel \and Matthis Dirksen}
+\author[Matthis Dirksen]{\tiny Leonhard Hetz \and Philipp Braun \and Carmine Bianco \and Alissa Wenzel \and Matthis Dirksen}
 \date{July 21, 2016}
 
 % Select theme
@@ -60,7 +60,7 @@
 						\item \textbf{\emph{Motivation}}
 					\end{itemize}
 					\item Background
-					\item System Mode
+					\item System Model
 					\item Simulation
 					\item Evaluations
 					\item Conclusions
@@ -79,14 +79,13 @@
 				\begin{itemize}
 					\item CoMP: optimizing performance by sending and receiving data to and from User Entities from several points
 					\item Especially important on cell edges
-					\item aim: improving quality for user, optimum capacity of network 
+					\item Aim: improving quality for user, optimum capacity of network 
 					\item CoMP still in development (not included in LTE Rel. 10)
 				\end{itemize}
 			\end{column}
 		\end{columns}
 	 \end{block}
  \end{frame}
-
 % Background Slide
 % Research topics and papers
  \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
@@ -94,8 +93,8 @@
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item papers on LTE-A, Joint Transmission, Beamforming and CoMP in general
-					\item reference: MATLAB-based down-
+					\item Papers on LTE-A, Joint Transmission, Beamforming and CoMP in general
+					\item Reference: MATLAB-based down-
 link physical-layer simulator for LTE (Mehlführer, C., 2009)
 				\end{itemize}
 			\end{column}
@@ -110,8 +109,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item classes providing main functionality: central unit, base station, user entity, channel
-					\item classes providing background data: TBS, helpers, params, precoding matrix
+					\item Classes providing main functionality: central unit, base station, user entity, channel
+					\item Classes providing background data and auxiliary functions: TBS, helpers, params, precoding matrix
 					\item XXX add graph of class hierarchy
 				\end{itemize}
 			\end{column}
@@ -126,10 +125,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item central unit: coordinates all base stations (one per simulation)
-					\item base station: matches subcarriers to connected users, calculates modulation
-					\item user entity: returns feedback to the base station (at the moment: randomly generated)
-					\item channel: has a certain frequency and amount of subcarriers, model: Rayleigh channel (XXX add graph of Rayleigh Channel)
+					\item Central Unit: coordinates all base stations (one per simulation)
+					\item Base Station: matches subcarriers to connected users, calculates modulation
+					
+					\item User Entity: returns feedback to the base station (at the moment: randomly generated)
+					\item Channel: has a certain frequency and amount of subcarriers, model: Rayleigh channel (XXX add graph of Rayleigh Channel)
+					\begin{itemize}
+						\item Friis equation for calculation of path loss
+					\end{itemize}
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -158,7 +161,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item Simulation with and without CoMP
-					\item Why should you use comp?
+					\item Why should you use CoMP?
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -171,7 +174,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item cell edges
+					\item CoMP allows better allocation for users at cell edges --> more receiving power
+					\item Utilization of different subcarriers inside conflict zones avoids interference
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -180,7 +184,9 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item computational power and time loss
+					\item Computational power and time loss
+					\item Bigger signaling overhead between users and base stations
+					\item More frequent communication with the CU --> bigger backhaul needed
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -193,8 +199,19 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item main functionality for a LTE-A simulator implemented
-					\item finding: CoMP can be helpful in a lot of cases --> individual test on necessarity
+					\item Main functionality for a LTE-A simulator implemented
+					\item Finding: CoMP can be helpful in a lot of cases --> individual test on necessarity
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+	 \begin{block}{What comes next?}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item Implementation of other CoMP schemes, e.g. coordinated beamforming
+					\item Further optimization of CU/BS, e.g. scheduling patterns
+					\item Implementation of different environment setups
 				\end{itemize}
 			\end{column}
 		\end{columns}
