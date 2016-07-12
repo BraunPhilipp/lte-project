@@ -190,10 +190,9 @@ classdef central_unit < handle
                     % Get group of conflicting users
                     conf_group = [user_iter conf_cell{user_iter}];
                     % Add Users to all possible Basestations
-                    conf_base_list = unique(base_ranking(conf_group,1))
+                    conf_base_list = unique(base_ranking(conf_group,1));
                     for base_iter = conf_base_list
                         % Assign all Conflicting Basestations User
-                        self.base_list(base_iter).user_list
                         bs_len = size(self.base_list(base_iter).user_list, 2);
                         if bs_len > 0
                             self.base_list(base_iter).user_list = [ self.base_list(base_iter).user_list, ...
