@@ -36,7 +36,8 @@ for i = 1:length(bs)
     thrput = thrput + cu.base_list(i).bhaul;
 end
 
-thrput
+dps_thrput = thrput;
+cu.draw(1);
 
 % Coordinated Scheduling
 cu.map_users_cs();
@@ -49,7 +50,11 @@ for i = 1:length(bs)
     thrput = thrput + cu.base_list(i).bhaul;
 end
 
-thrput
+cs_thrput = thrput;
+cu.draw(2);
+
+cs_thrput
+dps_thrput
 
 %% Simulate Transmission
 % cu.map_users_dps();
@@ -64,5 +69,5 @@ thrput
 %         cu.base_list(i).modulation(TBS_obj.TBs);
 %         cu.base_list(i).beamforming();
 %     end
-%     cu.draw();
+%     cu.draw(1);
 % end

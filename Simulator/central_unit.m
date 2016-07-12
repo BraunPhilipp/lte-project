@@ -187,21 +187,19 @@ classdef central_unit < handle
             [conf_matrix,conf_cell] = self.conflict_list();
             for user_iter = 1:length(self.user_list)
                 if sum(conf_matrix(user_iter,:)) > 0
-                    % Check if user is already mapped
-                    if map(user_iter) == 0
-                        % Get group of conflicting users
-                        conf_group = [conf_cell{user_iter}];
-                        % Add Users to all possible Basestations
-                        conf_base_list = unique(base_ranking(conf_group,1));
-                        for base_iter = conf_base_list
-                            % Assign all Conflicting Basestations User
-                            bs_len = size(self.base_list(base_iter).user_list, 1);
-                            if bs_len > 0
-                                self.base_list(base_iter).user_list = [ self.base_list(base_iter).user_list, ...
-                                                        self.user_list(user_iter) ];
-                            else
-                                self.base_list(base_iter).user_list = self.user_list(user_iter);
-                            end
+                    % Get group of conflicting users
+                    conf_group = [user_iter conf_cell{user_iter}];
+                    % Add Users to all possible Basestations
+                    conf_base_list = unique(base_ranking(conf_group,1))
+                    for base_iter = conf_base_list
+                        % Assign all Conflicting Basestations User
+                        self.base_list(base_iter).user_list
+                        bs_len = size(self.base_list(base_iter).user_list, 2);
+                        if bs_len > 0
+                            self.base_list(base_iter).user_list = [ self.base_list(base_iter).user_list, ...
+                                                    self.user_list(user_iter) ];
+                        else
+                            self.base_list(base_iter).user_list = self.user_list(user_iter);
                         end
                     end
                     self.base_map(user_iter) = 1;
@@ -232,11 +230,11 @@ classdef central_unit < handle
             end
         end
         
-        function draw(self)
+        function draw(self, step)
             % draw all base stations and all users that are mapped to that 
             % base stations
             % Get list of conflicts:
-            % figure(step);
+            figure(step);
             [conf,~] = self.conflict_list();
             for base_iter = 1:length(self.base_list)
                 for user_iter = 1:length(self.base_list(base_iter).user_list)   
