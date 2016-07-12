@@ -49,7 +49,7 @@ classdef base_station < handle
             
             obj.c_max = [];
             obj.tbs_max = [];
-            obj.bhaul = params.bhaul;
+            obj.bhaul = 0.0;
         end
         
         function beam = beamforming(self)
@@ -139,7 +139,7 @@ classdef base_station < handle
                     for subc = 1:length(subcarriers_ue)
                         % check out the subcarrier's cqi
                         cqi_ue = f.CQI(subcarriers_ue(subc));
-                        % count how many others subcarrier's have at least
+                        % count how many other subcarrier's have at least
                         % the same cqi. n_rb is the number of recource
                         % blocks considered in TBS
                         n_rb = sum(f.CQI(1,subcarriers_ue)>=cqi_ue); 

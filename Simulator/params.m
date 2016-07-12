@@ -10,7 +10,7 @@ properties (Constant)
     num_subcarrier = 25;    % 25 Subcarrier
     RB_spacing = 180000;    % 180kHz
     timestep = 0.001;       % 1ms
-    bhaul = 100000;         % 100 Mbit/s
+    bhaul = 100000;         % 100 Mbit/s Example Value
     
     n_u_antennas = [1, 1, 4, 8];
     n_b_antennas = [1, 4, 1, 8];
