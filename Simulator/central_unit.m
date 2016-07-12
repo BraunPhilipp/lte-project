@@ -233,11 +233,11 @@ classdef central_unit < handle
             end
         end
         
-        function draw(self,step)
+        function draw(self)
             % draw all base stations and all users that are mapped to that 
             % base stations
             % Get list of conflicts:
-            figure(step);
+            % figure(step);
             [conf,~] = self.conflict_list();
             for base_iter = 1:length(self.base_list)
                 for user_iter = 1:length(self.base_list(base_iter).user_list)   
@@ -273,9 +273,13 @@ classdef central_unit < handle
                         hold on;
                     end
                     labels = cellstr(num2str(0));
-                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');                    
+                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+                    hold on;
                 end
             end
+            drawnow
+            pause(0.5)
+            hold off;
         end
 
     end
