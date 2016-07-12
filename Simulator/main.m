@@ -24,6 +24,8 @@ end
 % Initialize Central Unit
 cu = central_unit(1,ue,bs);
 
+cu.map_users_dps();
+
 % Create TBS
 TBS_obj = TBS('TBS.xls');
 

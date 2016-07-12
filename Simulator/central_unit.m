@@ -82,7 +82,7 @@ classdef central_unit < handle
                     if (user_iter1 ~= user_iter2 && helpers.distance(self.user_list(user_iter1).pos, ...
                                                 self.user_list(user_iter2).pos) < params.user_distance)
                         % Same stations prefered ?
-                        if ( sum(ismember(snr_eval(user_iter1,[1,2]),...
+                        if ( sum(ismember(snr_eval(user_iter1,[1,2]), ...
                                 snr_eval(user_iter2,[1,2])))>1)
                             % Add Conflicting User to Matrix and Cell
                             conf_matr(user_iter1, user_iter2) = 1;
@@ -187,43 +187,42 @@ classdef central_unit < handle
             [conf_matrix,conf_cell] = self.conflict_list();
             for user_iter = 1:length(self.user_list)
                 if sum(conf_matrix(user_iter,:)) > 0
-                    % check if user is already mapped
-                    if map(user_iter)==0
-                        % get group of conflicting users:
-                        conf_group = [user_iter conf_cell{user_iter}];
-                        % check if no member of conf_group is already mapped
-                        if sum(map(conf_group))==0
-                            % get list of possible basestations:
-                            poss_bs = base_ranking(conf_group,1);
-                            % select one randomly
-                            selected_bs_index = randi(length(poss_bs));
-                            % assign all users to that basestation:
-                            map(conf_group)=poss_bs(selected_bs_index);
-                        % check if one user of conf_group is already mapped
-                        elseif sum(map(conf_group)>0)<2
-                            for conf_group_iter = 1:length(conf_group)
+                    % Check if user is already mapped
+                    if map(user_iter) == 0
+                        % Get group of conflicting users
+                        conf_group = [conf_cell{user_iter}];
+                        % Add Users to all possible Basestations
+                        conf_base_list = unique(base_ranking(conf_group,1));
+                        for base_iter = conf_base_list
+                            % Assign all Conflicting Basestations User
+                            bs_len = size(self.base_list(base_iter).user_list, 1);
+                            if bs_len > 0
+                                self.base_list(base_iter).user_list = [ self.base_list(base_iter).user_list, ...
+                                                        self.user_list(user_iter) ];
+                            else
+                                self.base_list(base_iter).user_list = self.user_list(user_iter);
                             end
                         end
-                    end                    
+                    end
+                    self.base_map(user_iter) = 1;
                 else
-                    % usual mapping:
-                    map(user_iter)= base_ranking(user_iter,1);
+                    % Get best possible Basestation Fit
+                    connected = base_ranking(user_iter,1);
+                    if connected > 0
+                        bs_len = size(self.base_list(connected).user_list, 1);
+                        if bs_len > 0
+                            self.base_list(connected).user_list = [ self.base_list(connected).user_list, ...
+                                                        self.user_list(user_iter) ];
+                        else
+                            self.base_list(connected).user_list = self.user_list(user_iter);
+                        end
+                        self.base_map(user_iter) = 1;
+                    else
+                        % if not basestation connection found
+                        self.base_map(user_iter) = 0;
+                    end
                 end
             end
-            
-            
-            
-%             map = self.ranking();
-            self.base_map = map;
-            
-            self.user_map = cell(length(self.base_list),1);
-            for map_iter = 1:length(map)
-                if map(map_iter) > 0
-                    self.user_map{map(map_iter)} = [self.user_map{map(map_iter)}, map_iter];
-                end
-            end
-            
-            self.map_to_basestation();
         end
         
         function map_to_basestation(self)
@@ -243,7 +242,7 @@ classdef central_unit < handle
                 for user_iter = 1:length(self.base_list(base_iter).user_list)   
                     x = self.base_list(base_iter).user_list(user_iter).pos(1);
                     y = self.base_list(base_iter).user_list(user_iter).pos(2);
-                    if sum(conf(self.base_list(base_iter).user_list(user_iter).id,:))>0
+                    if sum(conf(self.base_list(base_iter).user_list(user_iter).id,:)) > 0
                         plot(x,y,'-xm');
                         hold on;
                     else
@@ -260,9 +259,9 @@ classdef central_unit < handle
                 text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
                 hold on;
             end
-            % Draw all unmapped users:
+            % Draw all unmapped users
             for user_iter = 1:length(self.user_list)
-                if self.base_map(user_iter) ==0
+                if self.base_map(user_iter) == 0
                     x = self.user_list(user_iter).pos(1);
                     y = self.user_list(user_iter).pos(2);
                     if sum(conf(self.user_list(user_iter).id,:))>0
