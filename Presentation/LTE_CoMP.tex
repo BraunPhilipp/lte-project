@@ -127,6 +127,65 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 \end{block}
  \end{frame}
  
+ 
+ % Scheduling
+ \begin{frame}{Background - Scheduling}
+ 	\begin{block}{Scheduling}
+		\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item assignment of resource blocks (RB) to each user
+					\item i.e. Round Robin (timeslots divided equally between users)
+					\item dynamic scheduling: mapping RBs to users based on different criteria
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+% SINR
+ \begin{frame}{Background - SINR}
+ 	\begin{block}{SINR}
+		\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item signal-to-interference-plus-noise ratio
+					\begin{equation}
+\frac{S}{I + N}
+					\end{equation}
+					\begin{itemize}
+						\item S = power of signal
+						\item I = power of interference
+						\item N = power of noise
+					\end{itemize}
+					\item used to determine signal quality
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+% CQI and channel modulation
+ \begin{frame}{Background - CQI and channel modulation}
+ 	\begin{block}{CQI and channel modulation}
+		\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item Channel Quality Indicator
+					\item determines modulation
+					\begin{itemize}
+						\item transfer block size (TBS)
+						\item resource blocks for users
+					\end{itemize}
+					\item depends on SINR
+					\item Best CQI scheduling: maximation of rate, but unfair (only UEs with very good channels get scheduled at all) -> "fair" modulation necessary
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+
+ 
  % CoMP - overview
  \begin{frame}{Background - overview on CoMP}
  	\begin{block}{CoMP - overview}
@@ -196,63 +255,6 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 \end{block}
  \end{frame}
  
- % Scheduling
- \begin{frame}{Background - Scheduling}
- 	\begin{block}{Coordinated Scheduling}
-		\begin{columns}
-			\begin{column}{.9\textwidth}
-				\begin{itemize}
-					\item assignment of resource blocks (RB) to each user
-					\item i.e. Round Robin (timeslots divided equally between users)
-					\item dynamic scheduling: mapping RBs to users based on different criteria
-				\end{itemize}
-			\end{column}
-		\end{columns}
-	 \end{block}
- \end{frame}
-
-% SINR
- \begin{frame}{Background - SINR}
- 	\begin{block}{SINR}
-		\begin{columns}
-			\begin{column}{.9\textwidth}
-				\begin{itemize}
-					\item signal-to-interference-plus-noise ratio
-					\begin{equation}
-\frac{S}{I + N}
-					\end{equation}
-					\begin{itemize}
-						\item S = power of signal
-						\item I = power of interference
-						\item N = power of noise
-					\end{itemize}
-					\item used to determine signal quality
-				\end{itemize}
-			\end{column}
-		\end{columns}
-	 \end{block}
- \end{frame}
-
-% CQI and channel modulation
- \begin{frame}{Background - CQI and channel modulation}
- 	\begin{block}{CQI and channel modulation}
-		\begin{columns}
-			\begin{column}{.9\textwidth}
-				\begin{itemize}
-					\item Channel Quality Indicator
-					\item determines modulation
-					\begin{itemize}
-						\item transfer block size (TBS)
-						\item resource blocks for users
-					\end{itemize}
-					\item depends on SINR
-					\item Best CQI scheduling: maximation of rate, but unfair (only UEs with very good channels get scheduled at all) -> "fair" modulation necessary
-				\end{itemize}
-			\end{column}
-		\end{columns}
-	 \end{block}
- \end{frame}
-
  % Content Slide highlight System Model 
 \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
 	\begin{block}{Content}
