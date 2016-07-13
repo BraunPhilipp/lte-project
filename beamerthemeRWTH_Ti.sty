@@ -1,0 +1,126 @@
+% Add language options
+\def\beamer@tilanggerman{german}
+\def\beamer@tilangenglish{english}
+
+% changes language to english or german
+\DeclareOptionBeamer{german}{\def\beamer@tilang{german}}
+\DeclareOptionBeamer{deutsch}{\def\beamer@tilang{german}}
+\DeclareOptionBeamer{english}{\def\beamer@tilang{english}}
+\ExecuteOptionsBeamer{english}
+\ProcessOptionsBeamer
+
+% Set the institutes name matching the selected language
+\ifx\beamer@tilang\beamer@tilanggerman
+\institute[Theoretische Informationstechnik]%
+{Lehrstuhl f\"{u}r Theoretische Informationstechnik\\Prof. Dr. Rudolf Mathar\\RWTH Aachen}
+\else
+\institute[Theoretical Information Technology]%
+{Institute for Theoretical Information Technology\\Prof. Dr. Rudolf Mathar\\RWTH Aachen University}
+\fi
+
+\mode<presentation>
+
+% Requirement
+\RequirePackage[cmyk]{xcolor}
+\RequirePackage{tikz}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Colors
+\definecolor{rwthblue}{cmyk}{1,0.5,0,0}
+\definecolor{rwthac}{cmyk}{0.45,0.14,0,0}
+
+\setbeamercolor{title}{fg=rwthblue}
+\setbeamercolor{subtitle}{fg=rwthac}
+\setbeamercolor{frametitle}{fg=rwthblue}
+\setbeamercolor{framesubtitle}{fg=rwthblue}
+\setbeamercolor{author in foot}{fg=rwthblue}
+\setbeamercolor{block title}{fg=rwthblue}
+\setbeamercolor{block body}{bg=rwthac!10}
+
+% Set some template parameter
+\setbeamertemplate{itemize item}{\color{rwthblue}$\bullet$}
+\setbeamertemplate{itemize subitem}{\color{rwthblue}\scriptsize$\bullet$}
+\setbeamertemplate{itemize subsubitem}{\color{rwthblue}\tiny$\bullet$}
+\setbeamerfont{frametitle}{family=\bf}
+
+% Set some background
+\setbeamertemplate{background}{
+  \ifnum\c@framenumber=1%
+  % First page
+  \begin{tikzpicture}
+    \fill[color=rwthac!10] (0,\the\paperheight - 1.2cm) rectangle (\the\paperwidth,\the\paperheight + 1);
+    \node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=1cm]{rwth_ti_bild_cmyk}};
+  \end{tikzpicture}
+  \else%
+  \begin{tikzpicture}
+    % Top
+    \fill[color=rwthac!10] (0,\the\paperheight - 1cm) rectangle (\the\paperwidth,\the\paperheight + 1);
+    \node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.8cm]{rwth_ti_bild_cmyk}};
+    % Bottom
+    %\fill[color=rwthblue] (0,0) rectangle (\the\paperwidth,0.6cm);
+  \end{tikzpicture}
+  \fi%
+}
+
+% Title page
+\defbeamertemplate*{title page}{RWTH_Ti}[1][]
+{
+  \vskip1.5cm%
+  \begin{beamercolorbox}[sep=8pt,center,#1]{title page header}
+    \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par%
+    % If there is a subtitle include it.
+    \ifx\insertsubtitle\@empty%
+    \else%
+    \vskip0.25em%
+    \usebeamerfont{subtitle}\usebeamercolor[fg]{title}\insertsubtitle\par%
+    \fi
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[sep=8pt,center,#1]{author}
+    \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+  \vskip0.2cm%
+  \begin{beamercolorbox}[sep=8pt,center,#1]{author}
+    \usebeamerfont{institute}\insertinstitute%
+  \end{beamercolorbox}
+  \vskip0.2cm%
+  \begin{beamercolorbox}[sep=8pt,center,#1]{date}
+    \usebeamerfont{date}\insertdate%
+  \end{beamercolorbox}
+  \vfill
+}
+
+% Frame title for followup pages
+\defbeamertemplate*{frametitle}{RWTH_Ti}
+{%
+  \vskip-1px
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1cm,sep=0.1cm,left]{frametitle}
+    \usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle\par
+    \ifx\insertframesubtitle\@empty%
+    % Not very nice, but fills the space more or less properly.
+    \usebeamerfont{framesubtitle}\phantom{T}
+    \else%
+    \usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}\insertframesubtitle\par
+    \fi
+  \end{beamercolorbox}
+}
+
+% Frame footline for followup pages
+\defbeamertemplate*{footline}{RWTH_Ti}
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.6cm,sep=0.1cm,right]{background in foot}%
+    \usebeamerfont{pagenumber in head/foot}
+    \usebeamercolor[fg]{author in foot}
+    %\inserttitle
+    %\hskip2ex - \hskip2ex
+    %\insertshortauthor
+    %\hskip2ex - \hskip2ex
+    \insertframenumber{}\,/\,\inserttotalframenumber
+  \end{beamercolorbox}
+}
+
+
+\mode<all>
+
+
