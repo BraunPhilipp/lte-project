@@ -194,7 +194,8 @@ classdef central_unit < handle
                     for base_iter = 1:length(conf_base_list)
                         % Assign all Conflicting Basestations User
                         bs_len = size(self.base_list(conf_base_list(base_iter)).user_list, 1);
-                        if bs_len > 0
+                        mx_len = self.base_list(conf_base_list(base_iter)).subcarr_num;
+                        if (bs_len > 0 && bs_len+1 < mx_len)
                             self.base_list(conf_base_list(base_iter)).user_list = [ self.base_list(conf_base_list(base_iter)).user_list, ...
                                                     self.user_list(user_iter) ];
                         else
@@ -225,12 +226,15 @@ classdef central_unit < handle
         function map_to_basestation(self)
             % Pass User Entities to Basestation
             for base_iter = 1:length(self.base_list)
-                self.base_list(base_iter).user_list = self.user_list(self.user_map{base_iter});
+                mx_len = self.base_list(base_iter).subcarr_num;
+                if mx_len > length(self.base_list(base_iter).user_list)
+                    self.base_list(base_iter).user_list = self.user_list(self.user_map{base_iter});
+                end
             end
         end
                 
         function draw(self,step)
-            % draw all base stations and all users that are mapped to that 
+            % Draw all base stations and all users that are mapped to that 
             % base stations
             % Get list of conflicts
             figure(step);
