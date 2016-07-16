@@ -7,4 +7,6 @@ Feedback such as CQI is mainly generated randomly, but influences the modulation
 
 ###Examples
 
-![Backhaul](https://github.com/BraunPhilipp/backhaul.png)
+![Plotting](https://raw.githubusercontent.com/BraunPhilipp/lte-project/master/graph.png)
+
+![Backhaul](https://raw.githubusercontent.com/BraunPhilipp/lte-project/master/backhaul.png)
