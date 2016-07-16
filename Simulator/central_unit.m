@@ -228,52 +228,58 @@ classdef central_unit < handle
                 self.base_list(base_iter).user_list = self.user_list(self.user_map{base_iter});
             end
         end
-        
-        function draw(self, step)
+                
+        function draw(self,step)
             % draw all base stations and all users that are mapped to that 
             % base stations
-            % Get list of conflicts:
+            % Get list of conflicts
             figure(step);
             [conf,~] = self.conflict_list();
+            cmap= lines(length(self.base_list));
+            Conf_color= [1 0 1];
             for base_iter = 1:length(self.base_list)
                 for user_iter = 1:length(self.base_list(base_iter).user_list)   
                     x = self.base_list(base_iter).user_list(user_iter).pos(1);
                     y = self.base_list(base_iter).user_list(user_iter).pos(2);
-                    if sum(conf(self.base_list(base_iter).user_list(user_iter).id,:)) > 0
-                        plot(x,y,'-xm');
+                    if sum(conf(self.base_list(base_iter).user_list(user_iter).id,:))>0
+                        plot(x,y,'.','color',cmap(base_iter,:),'MarkerSize',20);
+
+%                         plot(x,y,'*','color',Conf_color,'MarkerSize',6);
                         hold on;
                     else
-                        plot(x,y,'-or');
+                        plot(x,y,'.','color',cmap(base_iter,:),'MarkerSize',20);
                         hold on;
                     end
                     labels = cellstr(num2str(base_iter));
-                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+%                     text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
                 end
                 x = self.base_list(base_iter).pos(1);
                 y = self.base_list(base_iter).pos(2);
-                plot(x,y,'-ob');
+                plot(x,y,'^','color',cmap(base_iter,:),'MarkerSize',12);
                 labels = cellstr(num2str(base_iter));
-                text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
+%                 text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
                 hold on;
             end
-            % Draw all unmapped users
+            % Draw all unmapped users:
+            
             for user_iter = 1:length(self.user_list)
-                if self.base_map(user_iter) == 0
+                if self.base_map(user_iter) ==0
                     x = self.user_list(user_iter).pos(1);
                     y = self.user_list(user_iter).pos(2);
                     if sum(conf(self.user_list(user_iter).id,:))>0
-                        plot(x,y,'-xm');
+%                         plot(x,y,'*k','MarkerSize',6);
+                        plot(x,y,'.k','MarkerSize',20)
+
                         hold on;
                     else
-                        plot(x,y,'-or');
+                        plot(x,y,'.k','MarkerSize',20)
                         hold on;
                     end
                     labels = cellstr(num2str(0));
-                    text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');
-                    hold on;
+%                     text(x,y,labels,'VerticalAlignment','bottom','HorizontalAlignment','right');                    
                 end
             end
-            drawnow
+            set(gca,'color',[0 0 0])
             pause(0.5)
             hold off;
         end
