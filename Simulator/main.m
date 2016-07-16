@@ -24,48 +24,48 @@ cu = central_unit(1,ue,bs);
 % Create TBS
 TBS_obj = TBS('TBS.xls');
 
-% %% Throughput Calculation
-% % Dynamic Point Selection
-% cu.map_users_dps();
-% 
-% thrput = 0.0;
-% for i = 1:length(bs)
-%     cu.base_list(i).scheduling();
-%     cu.base_list(i).modulation(TBS_obj.TBs);
-%     cu.base_list(i).beamforming();
-%     thrput = thrput + cu.base_list(i).bhaul;
-% end
-% 
-% dps_thrput = thrput;
-% cu.draw(1);
-% 
-% % Coordinated Scheduling
-% cu.map_users_cs();
-% 
-% thrput = 0.0;
-% for i = 1:length(bs)
-%     cu.base_list(i).scheduling();
-%     cu.base_list(i).modulation(TBS_obj.TBs);
-%     cu.base_list(i).beamforming();
-%     thrput = thrput + cu.base_list(i).bhaul;
-% end
-% 
-% cs_thrput = thrput;
-% cu.draw(2);
-% 
-% cs_thrput
-% dps_thrput
+%% Throughput Calculation
+% Dynamic Point Selection
+cu.map_users_dps();
 
-%% Simulate Transmission
-for delta = 1:20
-    display('timestep');
-    display(delta);
-    cu.map_users_dps();
-    %cu.map_users_cs();
-    for i = 1:length(bs)
-        cu.base_list(i).scheduling();
-        cu.base_list(i).modulation(TBS_obj.TBs);
-        cu.base_list(i).beamforming();
-    end
-    cu.draw(1);
+thrput = 0.0;
+for i = 1:length(bs)
+    cu.base_list(i).scheduling();
+    cu.base_list(i).modulation(TBS_obj.TBs);
+    cu.base_list(i).beamforming();
+    thrput = thrput + cu.base_list(i).bhaul;
 end
+
+dps_thrput = thrput;
+%cu.draw(1);
+
+% Coordinated Scheduling
+cu.map_users_cs();
+
+thrput = 0.0;
+for i = 1:length(bs)
+    cu.base_list(i).scheduling();
+    cu.base_list(i).modulation(TBS_obj.TBs);
+    cu.base_list(i).beamforming();
+    thrput = thrput + cu.base_list(i).bhaul;
+end
+
+cs_thrput = thrput;
+%cu.draw(2);
+
+cs_thrput
+dps_thrput
+
+% %% Simulate Transmission
+% for delta = 1:20
+%     display('timestep');
+%     display(delta);
+%     cu.map_users_dps();
+%     %cu.map_users_cs();
+%     for i = 1:length(bs)
+%         cu.base_list(i).scheduling();
+%         cu.base_list(i).modulation(TBS_obj.TBs);
+%         cu.base_list(i).beamforming();
+%     end
+%     cu.draw(1);
+% end

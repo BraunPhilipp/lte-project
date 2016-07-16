@@ -152,9 +152,12 @@ classdef base_station < handle
                             (:,n_rb,n_layers).*(TBS(:,n_rb,n_layers)<=TBS_max));
                     end
                     % save highest MCS and TBS value for given user
-                    modu(user_iter) = max(MCS_values);
-                    TBS_values(user_iter) = max(TBS_values_ue);
-                    
+                    if (isempty(modu) || isempty(MCS_values))
+                        modu = 0;
+                    else
+                        modu(user_iter) = max(MCS_values);
+                        TBS_values(user_iter) = max(TBS_values_ue);
+                    end
                 end
                 % Return Modulation
                 fprintf('Modulation: ');
