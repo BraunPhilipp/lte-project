@@ -1,25 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.6)  13 JUL 2016 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.7.5)  20 JUL 2016 00:38
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**LTE_CoMP.tex
-(./LTE_CoMP.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamer.cls
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasercs.sty
+**./LTE_CoMP.tex
+(LTE_CoMP.tex
+LaTeX2e <2016/03/31> patch level 1
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamer.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasercs.sty"
 Package: beamerbasercs 2015/03/08 (rcs-revision 368aa9ba9d38)
 )
 Document Class: beamer 2015/01/05 3.36 A class for typesetting presentations (r
 cs-revision 8a39122e1f63)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasemodes.sty"
 Package: beamerbasemodes 2013/09/03 (rcs-revision 768f2d98ca64)
 \beamer@tempbox=\box26
 \beamer@tempcount=\count79
 \c@beamerpauses=\count80
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasedecode.sty"
 Package: beamerbasedecode 2010/05/01 (rcs-revision efa082c6111d)
 \beamer@slideinframe=\count81
 \beamer@minimum=\count82
@@ -27,7 +24,7 @@ Package: beamerbasedecode 2010/05/01 (rcs-revision efa082c6111d)
 \beamer@commentbox=\box27
 \beamer@modecount=\count83
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 \headheight=\dimen102
@@ -73,24 +70,24 @@ Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 \beamer@sectionadjust=\count100
 \beamer@tocsectionnumber=\count101
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseoptions.sty"
 Package: beamerbaseoptions 2013/03/10 (rcs-revision 47431932db0d)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 ))
 \beamer@paperwidth=\skip42
 \beamer@paperheight=\skip43
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count102
@@ -105,32 +102,33 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen125
 \Gm@layoutvoffset=\dimen126
 \Gm@dimlist=\toks15
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2016/06/17 v0.06h Graphics/color for pdfTeX
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count105
@@ -138,32 +136,31 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
 \pgfutil@everybye=\toks16
 \pgfutil@tempdima=\dimen129
 \pgfutil@tempdimb=\dimen130
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.te
+x")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
 \pgfutil@abb=\box34
-(/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
 \pgfkeys@pathtoks=\toks17
 \pgfkeys@temptoks=\toks18
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.te
+x"
 \pgfkeys@tmptoks=\toks19
 ))
 \pgf@x=\dimen131
@@ -183,33 +180,31 @@ ode.tex
 \t@pgf@toka=\toks20
 \t@pgf@tokb=\toks21
 \t@pgf@tokc=\toks22
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
+ex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count110
 \pgfsyssoftpath@bigbuffer@items=\count111
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
+ex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -223,12 +218,13 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
 \pgfmath@dimen=\dimen139
 \pgfmath@count=\count112
 \pgfmath@box=\box35
@@ -236,29 +232,28 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks24
 \pgfmath@stack@operation=\toks25
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count113
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen140
 \pgf@picmaxx=\dimen141
@@ -275,98 +270,94 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen152
 \pgf@zy=\dimen153
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
+ode.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen154
 \pgf@path@lasty=\dimen155
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
+tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen156
 \pgf@shorten@start@additional=\dimen157
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box36
 \pgf@hbox=\box37
 \pgf@layerbox@main=\box38
 \pgf@picture@serial@count=\count114
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
+de.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen158
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
+.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen159
 \pgf@pt@y=\dimen160
 \pgf@pt@temp=\dimen161
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.te
+x"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.
+code.tex"
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen162
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen163
 \pgf@sys@shading@range@num=\count115
-)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
+x"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
+ex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box39
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+"
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.co
+de.tex"
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.t
+ex"
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
-)))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\xxcolor.sty"
 Package: xxcolor 2003/10/24 ver 0.1
 \XC@nummixins=\count116
 \XC@countmixins=\count117
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2016/05/21 v6.83p Hypertext links for LaTeX
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -383,7 +374,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -405,54 +396,54 @@ Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen164
 \Hy@linkcounter=\count118
 \Hy@pagecounter=\count119
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2016/05/21 v6.83p Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count120
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `bookmarks' set `true' on input line 4322.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4322.
-Package hyperref Info: Option `implicit' set `false' on input line 4322.
-Package hyperref Info: Hyper figures OFF on input line 4446.
-Package hyperref Info: Link nesting OFF on input line 4451.
-Package hyperref Info: Hyper index ON on input line 4454.
-Package hyperref Info: Plain pages OFF on input line 4461.
-Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4362.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4362.
+Package hyperref Info: Option `implicit' set `false' on input line 4362.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
-Package hyperref Info: Bookmarks ON on input line 4691.
+Package hyperref Info: Bookmarks ON on input line 4735.
 \c@Hy@tempcnt=\count121
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5044.
+LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen165
 \Fld@menulength=\count122
 \Field@Width=\dimen166
 \Fld@charsize=\dimen167
-Package hyperref Info: Hyper figures OFF on input line 6298.
-Package hyperref Info: Link nesting OFF on input line 6303.
-Package hyperref Info: Hyper index ON on input line 6306.
-Package hyperref Info: backreferencing OFF on input line 6313.
-Package hyperref Info: Link coloring OFF on input line 6318.
-Package hyperref Info: Link coloring with OCG OFF on input line 6323.
-Package hyperref Info: PDF/A mode OFF on input line 6328.
-LaTeX Info: Redefining \ref on input line 6368.
-LaTeX Info: Redefining \pageref on input line 6372.
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
 \Hy@abspage=\count123
 
 
@@ -462,29 +453,29 @@ Package hyperref Message: Stopped early.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2016/05/21 v6.83p Hyperref driver for pdfTeX
 \Fld@listcount=\count124
 \c@bookmark@seq@number=\count125
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaserequires.sty"
 Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
-y
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasecompatibility.sty
+"
 Package: beamerbasecompatibility 2012/05/01  (rcs-revision 67c48b3b652d)
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasefont.sty"
 Package: beamerbasefont 2015/01/05  (rcs-revision b4b4bee242e2)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks26
 \symAMSa=\mathgroup4
@@ -492,35 +483,36 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\sansmathaccent\sansmathaccent.sty"
 Package: sansmathaccent 2013/03/28
-(/usr/local/texlive/2016/texmf-dist/tex/latex/filehook/filehook.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\filehook\filehook.sty"
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 )))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasetranslator.sty"
 Package: beamerbasetranslator 2010/06/11  (rcs-revision 85fd1cc7fc42)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/translator.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\translator.sty"
 Package: translator 2010/06/12 ver 1.10
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/translator-lang
-uage-mappings.tex)))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasemisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\translator-langu
+age-mappings.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasemisc.sty"
 Package: beamerbasemisc 2013/09/03  (rcs-revision a55719c41d85)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasetwoscreens.sty"
 Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseoverlay.sty"
 Package: beamerbaseoverlay 2013/12/25  (rcs-revision f6bd5e3805da)
 \beamer@argscount=\count126
 \beamer@lastskipcover=\skip44
 \beamer@trivlistdepth=\count127
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasetitle.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasetitle.sty"
 Package: beamerbasetitle 2010/09/21  (rcs-revision f0446ed0b6ae)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasesection.sty"
 Package: beamerbasesection 2013/06/07  (rcs-revision 60b9fe0f342f)
 \c@lecture=\count128
 \c@part=\count129
@@ -528,7 +520,7 @@ Package: beamerbasesection 2013/06/07  (rcs-revision 60b9fe0f342f)
 \c@subsection=\count131
 \c@subsubsection=\count132
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseframe.sty"
 Package: beamerbaseframe 2014/02/20  (rcs-revision 4b8ceeeff434)
 \beamer@framebox=\box40
 \beamer@frametitlebox=\box41
@@ -545,11 +537,11 @@ Package: beamerbaseframe 2014/02/20  (rcs-revision 4b8ceeeff434)
 \framewidth=\dimen169
 \c@framenumber=\count136
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseverbatim.sty"
 Package: beamerbaseverbatim 2015/01/05  (rcs-revision 431510bb5890)
 \beamer@verbatimfileout=\write4
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseframesize.sty"
 Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
 \beamer@splitbox=\box43
 \beamer@autobreakcount=\count137
@@ -557,27 +549,27 @@ Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
 \beamer@frametitletoks=\toks28
 \beamer@framesubtitletoks=\toks29
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
-sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseframecomponents.s
+ty"
 Package: beamerbaseframecomponents 2013/10/18  (rcs-revision 5cf6c5555a45)
 \beamer@footins=\box44
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasecolor.sty"
 Package: beamerbasecolor 2015/02/21  (rcs-revision d944b04ee2d5)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasenotes.sty"
 Package: beamerbasenotes 2012/12/19  (rcs-revision 1686da3db3c9)
 \beamer@frameboxcopy=\box45
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasetoc.sty"
 Package: beamerbasetoc 2015/03/08  (rcs-revision 7270298bbaae)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasetemplates.sty"
 Package: beamerbasetemplates 2010/05/01  (rcs-revision efa082c6111d)
 \beamer@sbttoks=\toks30
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseauxtemplates.sty"
 Package: beamerbaseauxtemplates 2014/06/30  (rcs-revision 580088513a67)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaseboxes.sty"
 Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
 \bmb@box=\box46
 \bmb@colorbox=\box47
@@ -591,10 +583,10 @@ Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
 )
 \beamer@blockheadheight=\dimen175
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
-ty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbaselocalstructure.st
+y"
 Package: beamerbaselocalstructure 2014/09/10  (rcs-revision 393f6dcff371)
- (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/enumerate.sty
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks31
 )
@@ -603,31 +595,31 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasenavigation.sty"
 Package: beamerbasenavigation 2015/02/27  (rcs-revision 923f4bf87efa)
 \beamer@section@min@dim=\dimen176
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasetheorems.sty"
 Package: beamerbasetheorems 2010/06/06  (rcs-revision 7e7cc5e53e9d)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
 \ex@=\dimen177
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen178
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count140
@@ -668,7 +660,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks37
 \thm@bodyfont=\toks38
@@ -682,44 +674,43 @@ Package: amsthm 2015/03/04 v2.20.2
 )
 \c@theorem=\count152
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/beamerbasethemes.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\beamerbasethemes.sty"
 Package: beamerbasethemes 2010/05/01  (rcs-revision efa082c6111d)
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/theme/beamerthemede
-fault.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\themes\theme\beamerthemedef
+ault.sty"
 Package: beamerthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/font/beamerfontthem
-edefault.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\themes\font\beamerfonttheme
+default.sty"
 Package: beamerfontthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
-emedefault.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\themes\color\beamercolorthe
+medefault.sty"
 Package: beamercolorthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
-emedefault.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\themes\inner\beamerinnerthe
+medefault.sty"
 Package: beamerinnerthemedefault 2014/06/30  (rcs-revision 580088513a67)
 \beamer@dima=\dimen186
 \beamer@dimb=\dimen187
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
-emedefault.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\themes\outer\beamerouterthe
+medefault.sty"
 Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
-)))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -956,7 +947,7 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -997,7 +988,7 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -1023,20 +1014,27 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
 Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count153
 \U@D=\dimen188
@@ -1046,56 +1044,51 @@ LaTeX Info: Redefining \textlatin on input line 1448.
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks45
 \verbatim@line=\toks46
 \verbatim@in@stream=\read2
 )
-(./beamerthemeRWTH_Ti.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(beamerthemeRWTH_Ti.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box53
-)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
+sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen189
 \pgf@nodesepend=\dimen190
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
+sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
 \pgffor@iter=\dimen191
 \pgffor@skip=\dimen192
 \pgffor@stack=\toks47
 \pgffor@toks=\toks48
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
+code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count154
 \pgfplotmarksize=\dimen193
@@ -1115,8 +1108,7 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count157
 \tikz@fig@count=\count158
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count159
 \pgfmatrixcurrentcolumn=\count160
@@ -1124,10 +1116,10 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count162
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))) (./LTE_CoMP.aux)
+)))) (LTE_CoMP.aux)
 \openout1 = `LTE_CoMP.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -1179,7 +1171,7 @@ LaTeX Font Info:    ... okay on input line 17.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count163
 \scratchdimen=\dimen256
@@ -1192,29 +1184,27 @@ LaTeX Font Info:    ... okay on input line 17.
 \MPnumerator=\count167
 \makeMPintoPDFobject=\count168
 \everyMPtoPDFconversion=\toks50
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box59
 Package hyperref Info: Link coloring OFF on input line 17.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count169
@@ -1223,7 +1213,7 @@ LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
 
-(./LTE_CoMP.out) (./LTE_CoMP.out)
+(LTE_CoMP.out) (LTE_CoMP.out)
 \@outlinefile=\write5
 \openout5 = `LTE_CoMP.out'.
 
@@ -1285,45 +1275,43 @@ LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
 ut line 17.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-basic-dictionary/translator-basic-dictionary-English.dict
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
+-basic-dictionary\translator-basic-dictionary-English.dict"
 Dictionary: translator-basic-dictionary, Language: English 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-bibliography-dictionary/translator-bibliography-dictionary-English.dict
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
+-bibliography-dictionary\translator-bibliography-dictionary-English.dict"
 Dictionary: translator-bibliography-dictionary, Language: English 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-environment-dictionary/translator-environment-dictionary-English.dict
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
+-environment-dictionary\translator-environment-dictionary-English.dict"
 Dictionary: translator-environment-dictionary, Language: English 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-months-dictionary/translator-months-dictionary-English.dict
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
+-months-dictionary\translator-months-dictionary-English.dict"
 Dictionary: translator-months-dictionary, Language: English 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-numbers-dictionary/translator-numbers-dictionary-English.dict
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
+-numbers-dictionary\translator-numbers-dictionary-English.dict"
 Dictionary: translator-numbers-dictionary, Language: English 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-theorem-dictionary/translator-theorem-dictionary-English.dict
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
+-theorem-dictionary\translator-theorem-dictionary-English.dict"
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 17.
-
-(./LTE_CoMP.nav)
+ (LTE_CoMP.nav)
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
 (epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
-
-<rwth_ti_bild_cmyk-eps-converted-to.pdf, id=13, 283.0575pt x 91.34125pt>
+<rwth_ti_bild_cmyk-eps-converted-to.pdf, id=12, 283.0575pt x 91.34125pt>
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
@@ -1332,36 +1320,38 @@ ine 20.
 (pdftex.def)             Requested size: 88.17018pt x 28.45274pt.
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./rwth_
-ti_bild_cmyk-eps-converted-to.pdf>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./rwth_ti_bild_cmyk-eps-c
+onverted-to.pdf>]
 LaTeX Font Info:    Try loading font information for U+msa on input line 50.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
 line 50.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\sansmathaccent\ot1mathkerncmss.fd"
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
 (epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
- <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
+
+<use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
 ine 50.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
@@ -1374,152 +1364,152 @@ LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 72.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 69.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
  <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 72.
+ine 69.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [3
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 88.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 88.
+ine 85.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [4
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 107.
+ine 104.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [5
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 128.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 128.
+ine 129.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [6
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 144.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 144.
+ine 145.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [7
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 166.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 170.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 166.
+ine 170.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [8
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 186.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 186.
+ine 190.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [9
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 206.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 210.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 206.
+ine 210.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [10
 
@@ -1528,534 +1518,544 @@ ine 206.
 File: W020101021303791421974.jpg Graphic file (type jpg)
 
 <use W020101021303791421974.jpg>
-Package pdftex.def Info: W020101021303791421974.jpg used on input line 227.
+Package pdftex.def Info: W020101021303791421974.jpg used on input line 231.
 (pdftex.def)             Requested size: 307.29346pt x 87.57971pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 227.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 231.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
  <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 227.
+ine 231.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
 
 [11
 
  <./W020101021303791421974.jpg>]
+<GrafikCS.png, id=90, 338.9463pt x 96.6009pt>
+File: GrafikCS.png Graphic file (type png)
+ <use GrafikCS.png>
+Package pdftex.def Info: GrafikCS.png used on input line 246.
+(pdftex.def)             Requested size: 254.66423pt x 72.58018pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 242.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 246.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 242.
+ine 246.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [12
 
-]
+ <./GrafikCS.png>]
+<GrafikDPS.png, id=98, 338.9463pt x 96.6009pt>
+File: GrafikDPS.png Graphic file (type png)
+ <use GrafikDPS.png>
+Package pdftex.def Info: GrafikDPS.png used on input line 261.
+(pdftex.def)             Requested size: 254.66423pt x 72.58018pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 257.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 261.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 257.
+ine 261.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [13
 
-]
+ <./GrafikDPS.png>]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 276.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 280.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 276.
+ine 280.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [14
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 294.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 298.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 294.
+ine 298.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [15
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 308.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 308.
+ine 312.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [16
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 332.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 336.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 332.
+ine 336.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [17
 
 ]
-<klassen.png, id=121, 698.61pt x 352.31625pt>
+<klassen.png, id=126, 698.61pt x 352.31625pt>
 File: klassen.png Graphic file (type png)
  <use klassen.png>
-Package pdftex.def Info: klassen.png used on input line 339.
+Package pdftex.def Info: klassen.png used on input line 343.
 (pdftex.def)             Requested size: 307.29341pt x 154.97124pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 339.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 339.
+ine 343.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [18
 
  <./klassen.png>]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 358.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 362.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 358.
+ine 362.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [19
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 383.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 387.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 383.
+ine 387.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [20
 
 ]
-<MapPlotDPS1.png, id=142, 421.575pt x 316.0608pt>
+<MapPlotDPS1.png, id=146, 421.575pt x 316.0608pt>
 File: MapPlotDPS1.png Graphic file (type png)
  <use MapPlotDPS1.png>
-Package pdftex.def Info: MapPlotDPS1.png used on input line 391.
+Package pdftex.def Info: MapPlotDPS1.png used on input line 395.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 391
+Overfull \vbox (34.72908pt too high) detected at line 395
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 391.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 395.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 391.
+ine 395.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [21
 
- <./MapPlotDPS1.png (PNG copy)>] <MapPlotDPS2.png, id=148, 421.575pt x 316.0608
+ <./MapPlotDPS1.png (PNG copy)>] <MapPlotDPS2.png, id=152, 421.575pt x 316.0608
 pt>
 File: MapPlotDPS2.png Graphic file (type png)
  <use MapPlotDPS2.png>
-Package pdftex.def Info: MapPlotDPS2.png used on input line 398.
+Package pdftex.def Info: MapPlotDPS2.png used on input line 402.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 398
+Overfull \vbox (34.72908pt too high) detected at line 402
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 398.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 402.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 398.
+ine 402.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [22
 
- <./MapPlotDPS2.png (PNG copy)>] <MapPlotCS1.png, id=154, 421.575pt x 316.0608p
+ <./MapPlotDPS2.png (PNG copy)>] <MapPlotCS1.png, id=158, 421.575pt x 316.0608p
 t>
 File: MapPlotCS1.png Graphic file (type png)
  <use MapPlotCS1.png>
-Package pdftex.def Info: MapPlotCS1.png used on input line 406.
+Package pdftex.def Info: MapPlotCS1.png used on input line 410.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 406
+Overfull \vbox (34.72908pt too high) detected at line 410
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 406.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 410.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 406.
+ine 410.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [23
 
- <./MapPlotCS1.png (PNG copy)>] <MapPlotCS2.png, id=160, 421.575pt x 316.0608pt
+ <./MapPlotCS1.png (PNG copy)>] <MapPlotCS2.png, id=165, 421.575pt x 316.0608pt
 >
 File: MapPlotCS2.png Graphic file (type png)
  <use MapPlotCS2.png>
-Package pdftex.def Info: MapPlotCS2.png used on input line 413.
+Package pdftex.def Info: MapPlotCS2.png used on input line 417.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 413
+Overfull \vbox (34.72908pt too high) detected at line 417
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 413.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 417.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 413.
+ine 417.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [24
 
  <./MapPlotCS2.png (PNG copy)>]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 432.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 436.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 432.
+ine 436.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [25
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 449.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 453.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 449.
+ine 453.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [26
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 474.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 479.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 474.
+ine 479.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [27
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 494.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 494.
+ine 499.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [28
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 516.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 521.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 516.
+ine 521.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [29
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 533.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 538.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 533.
+ine 538.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [30
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 550.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 555.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 550.
+ine 555.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [31
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 568.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 573.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 568.
+ine 573.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [32
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 588.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 593.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 588.
+ine 593.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [33
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 608.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 613.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 608.
+ine 613.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [34
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 625.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 630.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 625.
+ine 630.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [35
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 00:10:36
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-18 16:53:22
 (epstopdf)                    size: 13187 bytes
-(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
-erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 631.
+(epstopdf)             Command: <epstopdf --outfile=rwth_ti_bild_cmyk-eps-conve
+rted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 636.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 631.
+ine 636.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [36
 
@@ -2069,11 +2069,11 @@ ine 631.
 \tf@snm=\write8
 \openout8 = `LTE_CoMP.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 634.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 634.
- (./LTE_CoMP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 634.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 634.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 639.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 639.
+ (LTE_CoMP.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 639.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 639.
 Package rerunfilecheck Info: File `LTE_CoMP.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2081,40 +2081,42 @@ Package rerunfilecheck Info: File `LTE_CoMP.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 634.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 639.
  ) 
 Here is how much of TeX's memory you used:
- 20691 strings out of 493014
- 402919 string characters out of 6133352
- 474308 words of memory out of 5000000
- 23654 multiletter control sequences out of 15000+600000
- 22813 words of font info for 56 fonts, out of 8000000 for 9000
+ 20728 strings out of 493335
+ 401386 string characters out of 3139261
+ 474688 words of memory out of 3000000
+ 23673 multiletter control sequences out of 15000+200000
+ 25226 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,71p,415b,1035s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfso1095.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on LTE_CoMP.pdf (36 pages, 570205 bytes).
+ 60i,13n,71p,418b,1029s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecsi1095.pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecsx1095.pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecsx1000.pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecsx0900.pk> <C:\Users\carmi\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0900.pk> <C:\Users\carmi\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0700.pk> <C:\Users\carmi\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Us
+ers\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecso1095.
+pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecss1200.pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecsx1440.pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\carmi\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecss0600.pk> <C:\Users\carmi\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk> <C:\Users\carmi\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb>
+Output written on LTE_CoMP.pdf (36 pages, 635453 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
+ 713 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
