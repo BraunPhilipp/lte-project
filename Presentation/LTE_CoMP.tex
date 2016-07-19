@@ -108,9 +108,13 @@
 
 % BACKGROUND SLIDES
 
+% TO DO
+% - JT too complicated, higher backhaul
+% - explain backhaul?
+
 % General information of research
- \begin{frame}{Background - Overview on research}
-	 \begin{block}{Background}
+ \begin{frame}{Background}
+	 \begin{block}{Overview on research}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
@@ -129,7 +133,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  
  
  % Scheduling
- \begin{frame}{Background - Scheduling}
+ \begin{frame}{Background}
  	\begin{block}{Scheduling}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
@@ -144,19 +148,21 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 % SINR
- \begin{frame}{Background - SINR}
+ \begin{frame}{Background}
  	\begin{block}{SINR}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item signal-to-interference-plus-noise ratio
-					\begin{equation}
-\frac{S}{I + N}
-					\end{equation}
+					\begin{equation*}
+\frac{P_j*(h_j*w_j)^{2}}{\sum (h_i*w_i)^{2}*P_i+(sigma_N)^{2}}
+					\end{equation*}
 					\begin{itemize}
-						\item S = power of signal
-						\item I = power of interference
-						\item N = power of noise
+						\item P\textsubscript{j} - Power of signal
+						\item h\textsubscript{j} - channel
+						\item w - precoding matrix
+						\item p\textsubscript{i} - Power of interference
+						\item sigma\textsubscript{N} - noise
 					\end{itemize}
 					\item used to determine signal quality
 				\end{itemize}
@@ -166,7 +172,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 % CQI and channel modulation
- \begin{frame}{Background - CQI and channel modulation}
+ \begin{frame}{Background}
  	\begin{block}{CQI and channel modulation}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
@@ -187,8 +193,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 
  
  % CoMP - overview
- \begin{frame}{Background - overview on CoMP}
- 	\begin{block}{CoMP - overview}
+ \begin{frame}{Background - CoMP}
+ 	\begin{block}{Overview}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
@@ -206,8 +212,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
 % CoMP - Major Categories
- \begin{frame}{Background - CoMP: major categories}
- 	\begin{block}{CoMP: major categories}
+ \begin{frame}{Background - CoMP}
+ 	\begin{block}{Major categories}
 		\begin{columns}
 \column{.5\textwidth}
 			Joint Processing (JP)
@@ -227,14 +233,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
  % Coordinated Scheduling
- \begin{frame}{Background - Coordinated Scheduling}
+ \begin{frame}{Background - CoMP}
  	\begin{block}{Coordinated Scheduling (CS)}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item data available at one node
 					\item transfered packets do not overlap in time
-					\item TODO insert graphic: timesteps
+					\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{GrafikCS.png}
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -242,14 +248,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 % Dynamic Point Selection
- \begin{frame}{Background - Dynamic Point Selection}
+ \begin{frame}{Background - CoMP}
  	\begin{block}{Dynamic Point Selection (DPS)}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item data usually available at several nodes
 					\item user decides per packet which base station is best
-					\item TODO insert graphic: timesteps
+					\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{GrafikDPS.png}
 				\end{itemize}
 			\end{column}
 		\end{columns}
