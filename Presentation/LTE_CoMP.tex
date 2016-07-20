@@ -31,16 +31,16 @@
  \end{comment}
 
 % Content Slide
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Motivation
 					\item Background
 					\item System Model
 					\item Simulation
-					\item Evaluations
+					\item Evaluation
 					\item Conclusions
 					\item References
 				\end{itemize}
@@ -50,19 +50,16 @@
 \end{frame}
 
 % Content Slide highlight Motivation 
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item \textbf{\emph{Introduction}}
-					\begin{itemize}
-						\item \textbf{\emph{Motivation}}
-					\end{itemize}
+					\item \textbf{\emph{Motivation}}
 					\item Background
 					\item System Model
 					\item Simulation
-					\item Evaluations
+					\item Evaluation
 					\item Conclusions
 					\item References
 				\end{itemize}
@@ -72,15 +69,15 @@
 \end{frame}
 
 % Motivation Slide
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	 \begin{block}{Motivation}
+ \begin{frame}{Motivation}
+	 \begin{block}{}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item CoMP: optimizing performance by sending and receiving data to and from User Entities from several points
-					\item Especially important on cell edges
-					\item Aim: improving quality for user, optimum capacity of network 
-					\item CoMP still in development (not included in LTE Rel. 10)
+					\item Due to the network densification plans, interference will substantially increase. Interference management will play an important role in future networks
+					\item Mainly cell edge users suffer from interference
+					\item Goal is to improve performance via interference management schemes - such as CoMP 
+					\item CoMP is a broad category of cooperation in the network with the aim of enhancing user performance
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -88,16 +85,16 @@
  \end{frame}
  
  % Content Slide highlight Background 
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Motivation
 					\item \textbf{\emph{Background}}
 					\item System Model
 					\item Simulation
-					\item Evaluations
+					\item Evaluation
 					\item Conclusions
 					\item References
 				\end{itemize}
@@ -108,9 +105,13 @@
 
 % BACKGROUND SLIDES
 
+% TO DO
+% - JT too complicated, higher backhaul
+% - explain backhaul?
+
 % General information of research
- \begin{frame}{Background - Overview on research}
-	 \begin{block}{Background}
+ \begin{frame}{Background}
+	 \begin{block}{Overview on research}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
@@ -119,7 +120,7 @@
 link physical-layer simulator for LTE (Mehlführer, C., 2009)
 					\begin{itemize}
 						\item MATLAB-based downlink physical-layer simulator for LTE
-						\item covering Multi-Cell Multi-User simulation scenarios -> most realistic
+						\item Covering Multi-Cell Multi-User simulation scenarios -> most realistic
 					\end{itemize}
 				\end{itemize}
 			\end{column}
@@ -129,14 +130,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  
  
  % Scheduling
- \begin{frame}{Background - Scheduling}
+ \begin{frame}{Background}
  	\begin{block}{Scheduling}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item assignment of resource blocks (RB) to each user
+					\item Assignment of resource blocks (RB) to each user
 					\item i.e. Round Robin (timeslots divided equally between users)
-					\item dynamic scheduling: mapping RBs to users based on different criteria
+					\item Dynamic scheduling: mapping RBs to users based on different criteria
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -144,21 +145,24 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 % SINR
- \begin{frame}{Background - SINR}
- 	\begin{block}{SINR}
+ \begin{frame}{Background}
+ 	\begin{block}{Channel model}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item signal-to-interference-plus-noise ratio
-					\begin{equation}
-\frac{S}{I + N}
-					\end{equation}
+					\item Signal-to-interference-plus-noise ratio -> Description of the channel
+					\begin{equation*}
+\frac{P_j*(h_j*w_j)^{2}}{\sum (h_i*w_i)^{2}*P_i+(sigma_N)^{2}}
+					\end{equation*}
 					\begin{itemize}
-						\item S = power of signal
-						\item I = power of interference
-						\item N = power of noise
+						\item P\textsubscript{j} - Power of signal
+						\item h\textsubscript{j} - Channel
+						\item w - Precoding matrix
+						\item p\textsubscript{i} - Power of interference
+						\item sigma\textsubscript{N} - Noise
 					\end{itemize}
-					\item used to determine signal quality
+					\item Used to determine signal quality
+					\item Block-fading channel to reduce complexity
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -166,19 +170,19 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 % CQI and channel modulation
- \begin{frame}{Background - CQI and channel modulation}
- 	\begin{block}{CQI and channel modulation}
+ \begin{frame}{Background}
+ 	\begin{block}{User feedback (CSI)}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item Channel Quality Indicator
-					\item determines modulation
+					\item Determines modulation
 					\begin{itemize}
-						\item transfer block size (TBS)
-						\item resource blocks for users
+						\item Transfer block size (TBS)
+						\item Resource blocks for users
 					\end{itemize}
-					\item depends on SINR
-					\item Best CQI scheduling: maximation of rate, but unfair (only UEs with very good channels get scheduled at all) -> "fair" modulation necessary
+					\item Depends on SINR
+					\item CSI includes CQI, PMI, RI. CQI depends on SINR, PMI and RI depends on beamforming
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -187,17 +191,17 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 
  
  % CoMP - overview
- \begin{frame}{Background - overview on CoMP}
- 	\begin{block}{CoMP - overview}
+ \begin{frame}{Background - CoMP}
+ 	\begin{block}{Overview}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item LTE Advanced: major enhancement of the LTE standard
 					\item CoMP: Coordinate MultiPoint operation
 					\begin{itemize}
-						\item refers to wide range of techniques
-						\item dynamic coordination or transmission and reception with multiple geographically separated eNBs (base stations)
-						\item goal: enhancing overall system performance, more effective use of resources, improved end user service quality (especially at the cell edges)
+						\item Refers to wide range of interference management techniques
+						\item Dynamic coordination or transmission and reception with multiple geographically separated eNBs (base stations)
+						\item Goal: enhancing overall system performance, more effective use of resources, improved end user service quality (especially at the cell edges)
 					\end{itemize}
 				\end{itemize}
 			\end{column}
@@ -206,8 +210,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
 % CoMP - Major Categories
- \begin{frame}{Background - CoMP: major categories}
- 	\begin{block}{CoMP: major categories}
+ \begin{frame}{Background - CoMP}
+ 	\begin{block}{Major categories}
 		\begin{columns}
 \column{.5\textwidth}
 			Joint Processing (JP)
@@ -215,8 +219,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 					\item Joint Transmission (JT)
 					\item Dynamic Point Selection (DPS)
 					\begin{itemize}
-						\item with muting
-						\item without muting
+						\item With muting
+						\item Without muting
 					\end{itemize}
 				\end{itemize}			
 			\column{.5\textwidth}
@@ -227,14 +231,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
  % Coordinated Scheduling
- \begin{frame}{Background - Coordinated Scheduling}
+ \begin{frame}{Background - CoMP}
  	\begin{block}{Coordinated Scheduling (CS)}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item data available at one node
-					\item transfered packets do not overlap in time
-					\item TODO insert graphic: timesteps
+					\item Data available at one node
+					\item Transfered packets do not overlap in time
+					\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{GrafikCS.png}
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -242,14 +246,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 % Dynamic Point Selection
- \begin{frame}{Background - Dynamic Point Selection}
+ \begin{frame}{Background - CoMP}
  	\begin{block}{Dynamic Point Selection (DPS)}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item data usually available at several nodes
-					\item user decides per packet which base station is best
-					\item TODO insert graphic: timesteps
+					\item Data usually available at several nodes
+					\item User decides per packet which base station is best
+					\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{GrafikDPS.png}
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -257,16 +261,16 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
  % Content Slide highlight System Model 
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Overview
 					\item Background
 					\item \textbf{\emph{System Model}}
 					\item Simulation
-					\item Evaluations
+					\item Evaluation
 					\item Conclusions
 					\item References
 				\end{itemize}
@@ -276,13 +280,13 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 \end{frame}
 
 % System Model Slide
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	 \begin{block}{System Model - Assumptions}
+ \begin{frame}{System Model}
+	 \begin{block}{Assumptions}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item UE Location is known
-					\item UE does not move so no Dopplereffect or similar effects
+					\item Geographical Location of UE is known
+					\item UE does not move so no Doppler effect, studying slow fading
 					\item CQI, PMI, RI are randomly generated
 					\begin{itemize}
 						\item PMI depends on generated CQI
@@ -297,13 +301,13 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
 % System Model Slide
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	 \begin{block}{System Model - Programming}
+ \begin{frame}{System Model}
+	 \begin{block}{Programming}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item Classes providing main functionality: Central Unit, Base Station, User Entity, Channel
-					\item Classes providing background data and auxiliary functions: TBS, helpers, params, precoding matrix
+					\item Classes providing background data and auxiliary functions: TBS, Helpers, Params, Precoding Matrix (PMI)
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -312,8 +316,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  
  
  % Details on our Classes
-  \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	 \begin{block}{System Model - Classes providing main functionality}
+  \begin{frame}{System Model}
+	 \begin{block}{Classes providing main functionality}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
@@ -357,16 +361,16 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
  % Content Slide highlight Simulation
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Motivation
 					\item Background
 					\item System Model
 					\item \textbf{\emph{Simulation}}
-					\item Evaluations
+					\item Evaluation
 					\item Conclusions
 					\item References
 				\end{itemize}
@@ -377,19 +381,20 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 
 % Simulation Slide
 % What is it able to do?
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	 \begin{block}{Simulation - main characteristics}
+ \begin{frame}{Simulation}
+	 \begin{block}{Main characteristics}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item Flexibility
+					\item Modularity
 					\item Simulation Process
 					\begin{itemize}
 						\item Initialization
 						\item Simulation Cycle
 						\begin{itemize}
 							\item mapping of users to basestations
-							\item assignment of recourceblocks to users
+							\item assignment of resource blocks to users
 							\item calculation of the best modulation and coding scheme
 					 	\end{itemize}
 					 \end{itemize}
@@ -401,7 +406,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
 % simulation slide II
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+ \begin{frame}{Simulation}
  \begin{block}{Simulation DPS I}
  
  \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{MapPlotDPS1.png}
@@ -409,7 +414,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
  % simulation slide III
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+ \begin{frame}{Simulation}
  \begin{block}{Simulation DPS II}
  \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{MapPlotDPS2.png}
  \end{block}
@@ -424,19 +429,19 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
  
  % simulation slide III
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+ \begin{frame}{Simulation}
  \begin{block}{Simulation CS II}
  \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{MapPlotCS2.png}
  \end{block}
  \end{frame}
  
  % Content Slide highlight Evaluation
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Motivation
 					\item Background
 					\item System Model
 					\item Simulation
@@ -452,27 +457,36 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 % Evaluations Slide
 % Simulation with and without Comp
 % why should you use CoMP
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	 \begin{block}{Evaluation}
-	 	\begin{columns}
+ \begin{frame}{Evaluation}
+	 \begin{block}{}
+ \begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Cost = additional backhaul
-					\item Use = less interference at cell edges
-					\item (I need graphics for the following slides)
+					\item 5000 Simulation Cycles
+					\item 70 User Entities, 12 Basestations
 				\end{itemize}
 			\end{column}
-		\end{columns}
-	 \end{block}
+		\end{columns} 
+		\end{block}\ \\
+	 \begin{tabular}{|l|l|l|l|}
+	 \hline
+	 & without CoMp & DPS & CS \\ \hline
+	 users in conflict & 19.65\% & 19.78\% & 19.67\% \\ \hline
+	 unassigned users & 0\% & 0\% & 10.5\% \\ \hline
+	 average backhaul[bit/s] & 78081 & 90791 & 77317 \\ \hline
+	 additional backhaul & +0\% & +16.28\% & -0.98\% \\ \hline
+	
+	 \end{tabular}
+
  \end{frame}
  
  % Slide on why to use CoMP
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+ \begin{frame}{Evaluation}
 	 \begin{block}{Advantages}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item CoMP allows better allocation for users at cell edges --> more receiving power
+					\item Less interference at cell edges, thus better SINR performance.
 					\item Utilization of different subcarriers inside conflict zones avoids interference
 				\end{itemize}
 			\end{column}
@@ -482,7 +496,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Computational power and time loss
+					\item Complexity of algorithms
+					\item Infeasibility with restricted backhauls
 					\item Bigger signaling overhead between users and base stations
 					\item More frequent communication with the CU --> bigger backhaul needed
 				\end{itemize}
@@ -493,16 +508,16 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 
  
   % Content Slide highlight Conclusions
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Motivation
 					\item Background
 					\item System Model
 					\item Simulation
-					\item Evaluations
+					\item Evaluation
 					\item \textbf{\emph{Conclusions}}
 					\item References
 				\end{itemize}
@@ -512,8 +527,8 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 \end{frame}
 
 % Conclusions Slide
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
-	\begin{block}{Conclusion}
+\begin{frame}{Summary}
+	\begin{block}{}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
@@ -534,7 +549,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 \end{frame}
 
 %Conclusions #2: which (factual) goals did we reach in the project?
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Summary}
 	 \begin{block}{Project goals reached}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
@@ -552,7 +567,7 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 
 %Conclusions #3: what did we learn (soft skills et al.) by working on this project (on two slides)
 
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Summary}
 	 \begin{block}{Learning goals reached}
 	 	 \hspace*{.1\linewidth}\begin{minipage}{.8\linewidth}
     		\begin{block}{Programming}
@@ -560,14 +575,14 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
       				\item \textbf{Object-oriented programming} on MATLAB
       				\item Graphical representation of simulation results
       				\item Working with parameter files/external files (e.g. precoding matrix) and already existing MATLAB libraries
-      				\item Defining model simplifications while still mantaining a degree of correctness
+      				\item Making model abstractions while maintaining accuracy
       			\end{itemize}
     		\end{block}
     	\end{minipage}
 	 \end{block}	 
  \end{frame}
 
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Summary}
 	 \begin{block}{Learning goals reached}
     	\hspace*{.1\linewidth}\begin{minipage}{.8\linewidth}
     		\begin{block}{Soft skills}
@@ -586,17 +601,17 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
  \end{frame}
 
 %Last slide: possible expansions: what could still be done?
- \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+ \begin{frame}{Future work}
 	 \begin{block}{What comes next?}
 	 	\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Implementation of other CoMP schemes, e.g. coordinated beamforming
+					\item Implementation of other CoMP schemes, e.g. coordinated beamforming and joint transmission
 					\item Different channel models (e.g. \textit{fast fading} channels)
-					\item Further optimization of CU/BS
+					\item Optimization of CoMP techniques
 					\begin{itemize}
 						\item Different allocation of implementation stages between CU and BS
-						\item More refined scheduling patterns (currently implemented: Round Robin)
+						\item Other scheduling patterns (currently implemented: Round Robin)
 					\end{itemize}
 					\item Implementation of different environment setups and parameters
 				\end{itemize}
@@ -607,16 +622,16 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 
 
   % Content Slide highlight References
-\begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+\begin{frame}{Overview}
 	\begin{block}{Content}
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Introduction
+					\item Motivation
 					\item Background
 					\item System Model
 					\item Simulation
-					\item Evaluations
+					\item Evaluation
 					\item Conclusions
 					\item \textbf{\emph{References}}
 				\end{itemize}
