@@ -10,38 +10,38 @@ for i = 1:num_of_bs
     bs(i) = base_station(i, coordinates(i,:), 61, params.num_subcarrier, 2000000000, 1400000, params.num_subcarrier, randi([8,16]));
 end
 
-% %% Generate SINR Profile
-% sinr_profile = [];
-% for x = -1000:50:1000
-% for y = -1000:50:1000
-%     % Calculate profile of all possible sending basestations
-%     user = user_entity(i, [x y], -135, randi([1,4]));
-%     z = 0;
-%     for base_iter = 1:length(bs)
-%         z = z + helpers.sinr(user, bs, base_iter);
-%     end
-%     sinr_profile = [sinr_profile; [x y z]];
-% end
-% end
-% 
-% tri = delaunay(sinr_profile(:,1), sinr_profile(:,2));
-% trisurf(tri,sinr_profile(:,1), sinr_profile(:,2), sinr_profile(:,3))
-% 
-% %sinr_profile
+%% Generate SINR Profile
+sinr_profile = [];
+for x = -1000:100:1000
+for y = -1000:100:1000
+    % Calculate profile of all possible sending basestations
+    user = user_entity(i, [x y], -135, randi([1,4]));
+    z = 0;
+    for base_iter = 1:length(bs)
+        z = z + helpers.sinr(user, bs, base_iter);
+    end
+    sinr_profile = [sinr_profile; [x y z]];
+end
+end
+
+tri = delaunay(sinr_profile(:,1), sinr_profile(:,2));
+trisurf(tri,sinr_profile(:,1), sinr_profile(:,2), sinr_profile(:,3))
+
+%sinr_profile
 
 % % Test coordinates
 % % scatter(coordinates(:,1)',coordinates(:,2)');
 % 
-% Generate 32 Random Users
-for i = 1:params.num_users
-    ue(i) = user_entity(i, randi([0 params.space_size], 1, 2), -135, randi([1,4]));
-end
-
-% Initialize Central Unit
-cu = central_unit(1,ue,bs);
-
-% Create TBS
-TBS_obj = TBS('TBS.xls');
+% % Generate 32 Random Users
+% for i = 1:params.num_users
+%     ue(i) = user_entity(i, randi([0 params.space_size], 1, 2), -135, randi([1,4]));
+% end
+% 
+% % Initialize Central Unit
+% cu = central_unit(1,ue,bs);
+% 
+% % Create TBS
+% TBS_obj = TBS('TBS.xls');
 
 % %% Throughput Calculation
 % % Dynamic Point Selection
@@ -141,6 +141,6 @@ TBS_obj = TBS('TBS.xls');
 %     cu.draw(1);
 % end
 
-ch = channel();
-ch.ray_chan();
+%ch = channel();
+%ch.ray_chan();
 
