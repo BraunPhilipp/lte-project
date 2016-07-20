@@ -369,14 +369,15 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
 					\item Flexibility
+					\item Modularity
 					\item Simulation Process
 					\begin{itemize}
 						\item Initialization
 						\item Simulation Cycle
 						\begin{itemize}
-							\item Mapping of users to basestations
-							\item Assignment of recourceblocks to users
-							\item Calculation of the best modulation and coding scheme
+							\item mapping of users to basestations
+							\item assignment of recourceblocks to users
+							\item calculation of the best modulation and coding scheme
 					 	\end{itemize}
 					 \end{itemize}
 					
@@ -440,16 +441,25 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 % why should you use CoMP
  \begin{frame}{Evaluation}
 	 \begin{block}{}
-	 	\begin{columns}
+ \begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Cost = additional backhaul
-					\item Use = less interference at cell edges
-					\item (I need graphics for the following slides)
+					\item 5000 Simulation Cycles
+					\item 70 User Entities, 12 Basestations
 				\end{itemize}
 			\end{column}
-		\end{columns}
-	 \end{block}
+		\end{columns} 
+		\end{block}\ \\
+	 \begin{tabular}{|l|l|l|l|}
+	 \hline
+	 & without CoMp & DPS & CS \\ \hline
+	 users in conflict & 19.65\% & 19.78\% & 19.67\% \\ \hline
+	 unassigned users & 0\% & 0\% & 10.5\% \\ \hline
+	 average backhaul[bit/s] & 78081 & 90791 & 77317 \\ \hline
+	 additional backhaul & +0\% & +16.28\% & -0.98\% \\ \hline
+	
+	 \end{tabular}
+
  \end{frame}
  
  % Slide on why to use CoMP
