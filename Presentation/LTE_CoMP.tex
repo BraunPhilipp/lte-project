@@ -120,7 +120,7 @@
 link physical-layer simulator for LTE (Mehlführer, C., 2009)
 					\begin{itemize}
 						\item MATLAB-based downlink physical-layer simulator for LTE
-						\item Covering Multi-Cell Multi-User simulation scenarios -> most realistic
+						\item Covering Multi-Cell Multi-User simulation scenarios $\rightarrow$ most realistic
 					\end{itemize}
 				\end{itemize}
 			\end{column}
@@ -150,9 +150,9 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 		\begin{columns}
 			\begin{column}{.9\textwidth}
 				\begin{itemize}
-					\item Signal-to-interference-plus-noise ratio -> Description of the channel
+					\item Signal-to-interference-plus-noise ratio $\rightarrow$ Description of the channel
 					\begin{equation*}
-\frac{P_j*(h_j*w_j)^{2}}{\sum (h_i*w_i)^{2}*P_i+(sigma_N)^{2}}
+\frac{P_j*(h_j*w_j)^{2}}{\sum (h_i*w_i)^{2}*P_i+(\sigma_N)^{2}}
 					\end{equation*}
 					\begin{itemize}
 						\item P\textsubscript{j} - Power of signal
@@ -314,6 +314,12 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 \end{block}
  \end{frame}
  
+   % Channel Simulation Results
+  \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{CQI and Spectral Efficiency}
+		 \includegraphics[width=\linewidth]{cqi.png}
+	 \end{block}
+ \end{frame}
  
  % Details on our Classes
   \begin{frame}{System Model}
@@ -382,6 +388,22 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
   \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
 	 \begin{block}{Class Overview}
 		 \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{klassen.png}
+	 \end{block}
+ \end{frame}
+
+% Friis Equation
+  \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Friis Equation}
+		\begin{equation*}
+			P_r = P_t + G_t + G_r + 20 log_{10}(\frac{\lambda}{4 \pi R})
+		\end{equation*}
+		\begin{itemize}
+			\item G - Antenna Gains
+			\item P - Received/Transmitted Power
+			\item $\lambda$ - Wavelength
+			\item R - Distance between Antennas
+			\item Units in dB
+		\end{itemize}
 	 \end{block}
  \end{frame}
 
