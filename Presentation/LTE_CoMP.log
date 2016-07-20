@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.6)  13 JUL 2016 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 JUL 2016 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1313,10 +1313,10 @@ LaTeX Info: Redefining \includegraphics on input line 17.
 
 (./LTE_CoMP.nav)
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1351,10 +1351,10 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1374,10 +1374,10 @@ LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1392,10 +1392,10 @@ ine 72.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1411,10 +1411,10 @@ ine 88.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1430,10 +1430,10 @@ ine 107.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1449,10 +1449,10 @@ ine 128.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1468,10 +1468,10 @@ ine 144.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1487,10 +1487,10 @@ ine 166.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1506,10 +1506,10 @@ ine 186.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1531,10 +1531,10 @@ File: W020101021303791421974.jpg Graphic file (type jpg)
 Package pdftex.def Info: W020101021303791421974.jpg used on input line 227.
 (pdftex.def)             Requested size: 307.29346pt x 87.57971pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1550,10 +1550,10 @@ ine 227.
 
  <./W020101021303791421974.jpg>]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1569,10 +1569,10 @@ ine 242.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1588,10 +1588,10 @@ ine 257.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1607,58 +1607,58 @@ ine 276.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 294.
+(epstopdf)             \includegraphics on input line 297.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 294.
+ine 297.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [15
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 308.
+(epstopdf)             \includegraphics on input line 311.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 308.
+ine 311.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [16
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 332.
+(epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 332.
+ine 343.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [17
 
@@ -1666,310 +1666,315 @@ ine 332.
 <klassen.png, id=121, 698.61pt x 352.31625pt>
 File: klassen.png Graphic file (type png)
  <use klassen.png>
-Package pdftex.def Info: klassen.png used on input line 339.
+Package pdftex.def Info: klassen.png used on input line 350.
 (pdftex.def)             Requested size: 307.29341pt x 154.97124pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 339.
+(epstopdf)             \includegraphics on input line 350.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 339.
+ine 350.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [18
 
  <./klassen.png>]
+<sinr.jpg, id=129, 1284.8pt x 751.80875pt>
+File: sinr.jpg Graphic file (type jpg)
+ <use sinr.jpg>
+Package pdftex.def Info: sinr.jpg used on input line 357.
+(pdftex.def)             Requested size: 307.28006pt x 179.80684pt.
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 358.
+(epstopdf)             \includegraphics on input line 357.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 358.
+ine 357.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [19
 
-]
+ <./sinr.jpg>]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 383.
+(epstopdf)             \includegraphics on input line 376.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 383.
+ine 376.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [20
 
 ]
-<MapPlotDPS1.png, id=142, 421.575pt x 316.0608pt>
-File: MapPlotDPS1.png Graphic file (type png)
- <use MapPlotDPS1.png>
-Package pdftex.def Info: MapPlotDPS1.png used on input line 391.
-(pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
-
-Overfull \vbox (34.72908pt too high) detected at line 391
- []
-
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 391.
+(epstopdf)             \includegraphics on input line 401.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
+
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 391.
+ine 401.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [21
 
- <./MapPlotDPS1.png (PNG copy)>] <MapPlotDPS2.png, id=148, 421.575pt x 316.0608
-pt>
-File: MapPlotDPS2.png Graphic file (type png)
- <use MapPlotDPS2.png>
-Package pdftex.def Info: MapPlotDPS2.png used on input line 398.
+]
+<MapPlotDPS1.png, id=148, 421.575pt x 316.0608pt>
+File: MapPlotDPS1.png Graphic file (type png)
+ <use MapPlotDPS1.png>
+Package pdftex.def Info: MapPlotDPS1.png used on input line 409.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 398
+Overfull \vbox (34.72908pt too high) detected at line 409
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 398.
+(epstopdf)             \includegraphics on input line 409.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 398.
+ine 409.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [22
 
- <./MapPlotDPS2.png (PNG copy)>] <MapPlotCS1.png, id=154, 421.575pt x 316.0608p
-t>
-File: MapPlotCS1.png Graphic file (type png)
- <use MapPlotCS1.png>
-Package pdftex.def Info: MapPlotCS1.png used on input line 406.
+ <./MapPlotDPS1.png (PNG copy)>] <MapPlotDPS2.png, id=154, 421.575pt x 316.0608
+pt>
+File: MapPlotDPS2.png Graphic file (type png)
+ <use MapPlotDPS2.png>
+Package pdftex.def Info: MapPlotDPS2.png used on input line 416.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 406
+Overfull \vbox (34.72908pt too high) detected at line 416
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 406.
+(epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 406.
+ine 416.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [23
 
- <./MapPlotCS1.png (PNG copy)>] <MapPlotCS2.png, id=160, 421.575pt x 316.0608pt
->
-File: MapPlotCS2.png Graphic file (type png)
- <use MapPlotCS2.png>
-Package pdftex.def Info: MapPlotCS2.png used on input line 413.
+ <./MapPlotDPS2.png (PNG copy)>] <MapPlotCS1.png, id=160, 421.575pt x 316.0608p
+t>
+File: MapPlotCS1.png Graphic file (type png)
+ <use MapPlotCS1.png>
+Package pdftex.def Info: MapPlotCS1.png used on input line 424.
 (pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
 
-Overfull \vbox (34.72908pt too high) detected at line 413
+Overfull \vbox (34.72908pt too high) detected at line 424
  []
 
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 413.
+(epstopdf)             \includegraphics on input line 424.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 413.
+ine 424.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [24
 
- <./MapPlotCS2.png (PNG copy)>]
+ <./MapPlotCS1.png (PNG copy)>] <MapPlotCS2.png, id=167, 421.575pt x 316.0608pt
+>
+File: MapPlotCS2.png Graphic file (type png)
+ <use MapPlotCS2.png>
+Package pdftex.def Info: MapPlotCS2.png used on input line 431.
+(pdftex.def)             Requested size: 307.29689pt x 230.38487pt.
+
+Overfull \vbox (34.72908pt too high) detected at line 431
+ []
+
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 432.
+(epstopdf)             \includegraphics on input line 431.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 432.
+ine 431.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [25
 
-]
+ <./MapPlotCS2.png (PNG copy)>]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 449.
+(epstopdf)             \includegraphics on input line 450.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
-
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 449.
+ine 450.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [26
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 474.
+(epstopdf)             \includegraphics on input line 467.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 474.
+ine 467.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [27
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 494.
+(epstopdf)             \includegraphics on input line 492.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 494.
+ine 492.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [28
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 516.
+(epstopdf)             \includegraphics on input line 512.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 516.
+ine 512.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [29
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 533.
+(epstopdf)             \includegraphics on input line 534.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 533.
+ine 534.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [30
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 550.
+(epstopdf)             \includegraphics on input line 551.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 550.
+ine 551.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [31
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
@@ -1985,79 +1990,98 @@ ine 568.
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 588.
+(epstopdf)             \includegraphics on input line 586.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 588.
+ine 586.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [33
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 608.
+(epstopdf)             \includegraphics on input line 606.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 608.
+ine 606.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [34
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 625.
+(epstopdf)             \includegraphics on input line 626.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 625.
+ine 626.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [35
 
 ]
 Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-12 19:40:26
 (epstopdf)                    size: 314206 bytes
 (epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-11 21:38:10
+(epstopdf)                    date: 2016-07-13 09:47:01
 (epstopdf)                    size: 13187 bytes
 (epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
 erted-to.pdf rwth_ti_bild_cmyk.eps>
-(epstopdf)             \includegraphics on input line 631.
+(epstopdf)             \includegraphics on input line 643.
 Package epstopdf Info: Output file is already uptodate.
 File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
 
 <use rwth_ti_bild_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
-ine 631.
+ine 643.
 (pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
  [36
+
+]
+Package epstopdf Info: Source file: <rwth_ti_bild_cmyk.eps>
+(epstopdf)                    date: 2016-07-12 19:40:26
+(epstopdf)                    size: 314206 bytes
+(epstopdf)             Output file: <rwth_ti_bild_cmyk-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-07-13 09:47:01
+(epstopdf)                    size: 13187 bytes
+(epstopdf)             Command: <repstopdf --outfile=rwth_ti_bild_cmyk-eps-conv
+erted-to.pdf rwth_ti_bild_cmyk.eps>
+(epstopdf)             \includegraphics on input line 649.
+Package epstopdf Info: Output file is already uptodate.
+File: rwth_ti_bild_cmyk-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rwth_ti_bild_cmyk-eps-converted-to.pdf>
+Package pdftex.def Info: rwth_ti_bild_cmyk-eps-converted-to.pdf used on input l
+ine 649.
+(pdftex.def)             Requested size: 70.53528pt x 22.76228pt.
+ [37
 
 ]
 \tf@nav=\write6
@@ -2069,11 +2093,11 @@ ine 631.
 \tf@snm=\write8
 \openout8 = `LTE_CoMP.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 634.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 634.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 652.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 652.
  (./LTE_CoMP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 634.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 634.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 652.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 652.
 Package rerunfilecheck Info: File `LTE_CoMP.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2081,13 +2105,13 @@ Package rerunfilecheck Info: File `LTE_CoMP.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 634.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 652.
  ) 
 Here is how much of TeX's memory you used:
- 20691 strings out of 493014
- 402919 string characters out of 6133352
+ 20701 strings out of 493014
+ 403041 string characters out of 6133351
  474308 words of memory out of 5000000
- 23654 multiletter control sequences out of 15000+600000
+ 23661 multiletter control sequences out of 15000+600000
  22813 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,13n,71p,415b,1035s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2111,10 +2135,10 @@ exmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on LTE_CoMP.pdf (36 pages, 570205 bytes).
+Output written on LTE_CoMP.pdf (37 pages, 688442 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
