@@ -346,6 +346,38 @@ link physical-layer simulator for LTE (Mehlführer, C., 2009)
 	 \end{block}
  \end{frame}
  
+  % Details on our Classes
+  \begin{frame}{System Model}
+	 \begin{block}{Slow versus Fast Fading}
+	 	\begin{columns}
+			\begin{column}{.9\textwidth}
+				\begin{itemize}
+					\item Slow Fading
+					\begin{itemize}
+						\item Coherence time of the channel is large relative to the delay requirement of the application
+						\item Amplitude and Phase Change imposed by the channel can be considered roughly constant
+					\end{itemize}
+					\item Fast Fading
+					\begin{itemize}
+						\item Coherence time of the channel is short relative to the delay requirement of the application
+						\item Amplitude and Phase Change imposed by the channel varies considerably over the period of use
+					\end{itemize}
+					
+					
+					\item Block Fading chosen for simplicity
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	 \end{block}
+ \end{frame}
+ 
+  % Channel Simulation Results
+  \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
+	 \begin{block}{Rayleigh Channel Simulation}
+		 \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{channel.png}
+	 \end{block}
+ \end{frame}
+ 
  % Slide with overview of the classes
   \begin{frame}{4G LTE CoMP, Coordinated Multipoint}{4th Semester Institute Project}
 	 \begin{block}{Class Overview}
